@@ -31,6 +31,5 @@ public class Main {
         decorator.ejecutarDecorator();
 
         //System.out.println("Patrones de comportamiento");
-
     }
 }
