@@ -3,6 +3,8 @@ package org.example;
 import org.example.creacion.Builder;
 import org.example.creacion.Factory;
 import org.example.creacion.Singleton;
+import org.example.estructura.Adapter;
+import org.example.estructura.Decorator;
 
 public class Main {
     public static void main(String[] args) {
@@ -17,13 +19,18 @@ public class Main {
         Builder builder = new Builder();
         //builder.ejecutarBuilder();
 
-        System.out.println("Singleton");
+        //System.out.println("Singleton");
         Singleton singleton = new Singleton();
-        singleton.ejecutarSingleton();
-        /**
-        System.out.println("Patrones de estructurales");
+        //singleton.ejecutarSingleton();
 
-        System.out.println("Patrones de comportamiento");
-         */
+        System.out.println("Patrones de estructurales");
+        Adapter adapter = new Adapter();
+        //adapter.ejecutarAdapter();
+
+        Decorator decorator = new Decorator();
+        decorator.ejecutarDecorator();
+
+        //System.out.println("Patrones de comportamiento");
+
     }
 }

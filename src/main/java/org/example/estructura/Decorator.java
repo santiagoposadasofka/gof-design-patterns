@@ -5,9 +5,18 @@ public class Decorator {
     /**
      * Permite a partir de una base añadir funciones o informacion adicional
      * */
+
+    /**
+     * Método que permite ejecutar el patrón Decorator
+     */
+    public void ejecutarDecorator(){
+
+    }
 }
 
-
+/**
+ * Clase abstracta bebida
+ */
 abstract class Bebida {
     String descripcion = "Bebida desconocida";
 
@@ -18,6 +27,9 @@ abstract class Bebida {
     public abstract double costo();
 }
 
+/**
+ * Clase café que hereda de la clase abstracta bebida.
+ */
 class Cafe extends Bebida {
     public Cafe() {
         descripcion = "Café";
