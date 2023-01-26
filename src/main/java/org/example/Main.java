@@ -7,6 +7,6 @@ public class Main {
         System.out.println("-----Pastron builder---------");
         Builder builder = new Builder();
         builder.ejecutar();
-
+        System.out.println("----------------------------");
     }
 }
