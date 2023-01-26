@@ -3,9 +3,14 @@ package org.example;
 import org.example.creacion.Builder;
 import org.example.creacion.Factory;
 import org.example.creacion.Singleton;
+import org.example.estructura.Adapter;
+import org.example.estructura.Decorator;
+import org.example.estructura.Proxy;
 
 public class Main {
     public static void main(String[] args) {
+        //Patrones de diseño de creación
+
         Factory factory = new Factory();
         //factory.ejecutarFiguraGeometricaFactory();
 
@@ -13,6 +18,17 @@ public class Main {
         //builder.ejecutarBuilder();
 
         Singleton singleton = new Singleton();
-        singleton.ejecutarSingleton();
+        //singleton.ejecutarSingleton();
+
+        //Patrones de diseño estructurales
+
+        Adapter adapter = new Adapter();
+        //adapter.ejecutarAdapter();
+
+        Decorator decorator = new Decorator();
+        //decorator.ejecutarDecorator();
+
+        Proxy proxy = new Proxy();
+        proxy.ejecutarProxy();
     }
 }
