@@ -7,20 +7,12 @@ public class Builder {
      * o con diferente cantidad de atributos de forma facil y legible.
      * */
 
-
-    Comida sanducheSencillo = new ComidaBuilder()
-            .carne("jamon")
-            .lechuga("crespa")
-            .queso("Mozarella").build();
-
-    Comida sanducheFull = new ComidaBuilder()
-            .carne("Res")
-            .tomate("en rodajas")
-            .lechuga("crespa")
-            .tomate("Mozarella")
-            .mostaza("Mucha")
-            .ketchup("poca")
-            .build();
+    public void ejecutar(){
+        ComidaBuilder comidaBuilder = new ComidaBuilder();
+        comidaBuilder.pan("Pan integral").carne("Res").lechuga("Verde").tomate("Rojo").queso("Cheddar").mayonesa("Hellman's").mostaza("French's").ketchup("Heinz");
+        Comida comida = comidaBuilder.build();
+        System.out.println(comida.toString());
+    }
 }
 
 
@@ -64,6 +56,19 @@ class Comida {
 
     public void setKetchup(String ketchup) {
         this.ketchup = ketchup;
+    }
+    @Override
+    public String toString() {
+        return "Comida{" +
+                "pan='" + pan + '\'' +
+                ", carne='" + carne + '\'' +
+                ", lechuga='" + lechuga + '\'' +
+                ", tomate='" + tomate + '\'' +
+                ", queso='" + queso + '\'' +
+                ", mayonesa='" + mayonesa + '\'' +
+                ", mostaza='" + mostaza + '\'' +
+                ", ketchup='" + ketchup + '\'' +
+                '}';
     }
 }
 
