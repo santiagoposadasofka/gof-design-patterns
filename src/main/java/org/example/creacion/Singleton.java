@@ -4,10 +4,18 @@ public class Singleton {
 
     /**
      * Nos permite asegurar que solo haya una instancia de un objeto esperado,
-     * ya sea por que queremos que solo haya un objeto de este tipo y que a partir de el,
+     * ya sea porque queremos que solo haya un objeto de este tipo y que a partir de él,
      * todos quien lo requieran tengan que tomar la informacion a partir de este,
-     * evitando que hayan diferencias entre los interesados a la hora de tomar informacion
+     * evitando que haya diferencias entre los interesados a la hora de tomar informacion
      * */
+
+    public void ejecutar() {
+        Configuracion config = Configuracion.getInstancia();
+        config.setValor1("Nuevo valor 1");
+        config.setValor2("Nuevo valor 2");
+        System.out.println("Valor 1: " + config.getValor1());
+        System.out.println("Valor 2: " + config.getValor2());
+    }
 }
 
 

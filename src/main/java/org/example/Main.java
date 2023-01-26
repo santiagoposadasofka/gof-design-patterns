@@ -2,6 +2,7 @@ package org.example;
 
 import org.example.creacion.Builder;
 import org.example.creacion.Factory;
+import org.example.creacion.Singleton;
 
 public class Main {
     public static void main(String[] args) {
@@ -11,7 +12,10 @@ public class Main {
         System.out.println("------Patron factory---------");
         Factory factory = new Factory();
         factory.ejecutar();
-        System.out.println("-----------------------------");
+        System.out.println("------Patron Singleton-------");
+        Singleton singleton = new Singleton();
+        singleton.ejecutar();
+        System.out.println("------------------------------");
 
     }
 }
