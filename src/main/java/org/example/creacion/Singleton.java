@@ -8,6 +8,11 @@ public class Singleton {
      * todos quien lo requieran tengan que tomar la informacion a partir de este,
      * evitando que hayan diferencias entre los interesados a la hora de tomar informacion
      * */
+    public void ejecutar(){
+        Configuracion configuracion = Configuracion.getInstancia("valor1","valor2");
+        System.out.println(configuracion.getValor1());
+        System.out.println(configuracion.getValor2());
+    }
 }
 
 
@@ -16,14 +21,15 @@ class Configuracion {
     private String valor1 = "default";
     private String valor2 = "default";
 
-    private Configuracion() {
-    }
-
-    public static Configuracion getInstancia() {
+    public static Configuracion getInstancia(String valor1,String valor2) {
         if (instancia == null) {
-            instancia = new Configuracion();
+            instancia = new Configuracion(valor1,valor2);
         }
         return instancia;
+    }
+    private Configuracion(String valor1,String valor2) {
+        this.valor1=valor1;
+        this.valor2=valor2;
     }
 
     public String getValor1() {
