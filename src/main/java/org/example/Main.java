@@ -5,6 +5,7 @@ import org.example.creacion.Factory;
 import org.example.creacion.Singleton;
 import org.example.estructura.Adapter;
 import org.example.estructura.Decorator;
+import org.example.estructura.Proxy;
 
 public class Main {
     public static void main(String[] args) {
@@ -28,7 +29,11 @@ public class Main {
         //adapter.ejecutarAdapter();
 
         Decorator decorator = new Decorator();
-        decorator.ejecutarDecorator();
+        //decorator.ejecutarDecorator();
+
+        Proxy proxy = new Proxy();
+        proxy.ejecutarProxy();
+
 
         //System.out.println("Patrones de comportamiento");
     }
