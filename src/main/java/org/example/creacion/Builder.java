@@ -1,5 +1,8 @@
 package org.example.creacion;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Builder {
 
     /**
@@ -7,6 +10,10 @@ public class Builder {
      * o con diferente cantidad de atributos de forma facil y legible.
      * */
 
+
+public void ejecutar(){
+
+    List<Comida> comidaBuild = new ArrayList<Comida>();
 
     Comida sanducheSencillo = new ComidaBuilder()
             .carne("jamon")
@@ -17,10 +24,44 @@ public class Builder {
             .carne("Res")
             .tomate("en rodajas")
             .lechuga("crespa")
-            .tomate("Mozarella")
+            .queso("Mozarella")
             .mostaza("Mucha")
             .ketchup("poca")
             .build();
+
+    Comida sanducheVegetariano = new ComidaBuilder()
+            .pan("Pan oregano")
+            .carne("de lentejas")
+            .lechuga("crespa")
+            .queso("Mozarella")
+            .mostaza("mucha")
+            .tomate("en julianas")
+            .build();
+
+    comidaBuild.add(sanducheSencillo);
+    comidaBuild.add(sanducheFull);
+    comidaBuild.add(sanducheVegetariano);
+
+        int i = 1;
+
+        for (Comida comid:comidaBuild) {
+
+            System.out.println("---------------pedido # " + i + "----------------");
+            System.out.println("Pan: " + comid.getPan());
+            System.out.println("Carne: " + comid.getCarne());
+            System.out.println("Lechuga: " + comid.getLechuga());
+            System.out.println("Tomate: " + comid.getTomate());
+            System.out.println("Queso: " + comid.getQueso());
+            System.out.println("Mayonesa: " + comid.getMayonesa());
+            System.out.println("Mostaza: " + comid.getMostaza());
+            System.out.println("Ketchup: " + comid.getKetchup());
+            i++;
+
+        }
+
+
+    }
+
 }
 
 
@@ -65,14 +106,48 @@ class Comida {
     public void setKetchup(String ketchup) {
         this.ketchup = ketchup;
     }
+
+    public String getPan() {
+        return pan;
+    }
+
+    public String getCarne() {
+        return carne;
+    }
+
+    public String getLechuga() {
+        return lechuga;
+    }
+
+    public String getTomate() {
+        return tomate;
+    }
+
+    public String getQueso() {
+        return queso;
+    }
+
+    public String getMayonesa() {
+        return mayonesa;
+    }
+
+    public String getMostaza() {
+        return mostaza;
+    }
+
+    public String getKetchup() {
+        return ketchup;
+    }
 }
 
 class ComidaBuilder {
     private Comida comida;
 
+
     public ComidaBuilder() {
         comida = new Comida();
     }
+
 
     public ComidaBuilder pan(String pan) {
         comida.setPan(pan);
@@ -117,4 +192,10 @@ class ComidaBuilder {
     public Comida build(){
         return this.comida;
     }
+
+    public Comida getComida() {
+        return comida;
+    }
+
+
 }
