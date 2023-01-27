@@ -1,6 +1,7 @@
 package org.example;
 
 import org.example.comprtamiento.Mediator;
+import org.example.comprtamiento.ObserverPatron;
 import org.example.creacion.Builder;
 import org.example.creacion.Factory;
 import org.example.creacion.Singleton;
@@ -37,6 +38,10 @@ public class Main {
 
         System.out.println("Patrones de comportamiento");
         Mediator mediator = new Mediator();
-        mediator.ejecutarMediator();
+        //mediator.ejecutarMediator();
+
+        ObserverPatron observerPatron = new ObserverPatron();
+        observerPatron.ejecutarObserver();
+
     }
 }
