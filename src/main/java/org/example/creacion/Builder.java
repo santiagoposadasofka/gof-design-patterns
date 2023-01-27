@@ -13,7 +13,7 @@ public class Builder {
                 .queso("Doble crema")
                 .mayonesa("poca")
                 .build();
-        System.out.println(sandiwch.toString());
+        System.out.println(sandiwch.toString2());
     }
 
 }
@@ -59,6 +59,29 @@ class Comida {
 
     public void setKetchup(String ketchup) {
         this.ketchup = ketchup;
+    }
+
+
+    public String toString2() {
+        String resultado = "Comida{";
+        if (pan != null){
+            resultado += "pan = " + pan+ "\\" ;
+        }  if (carne != null) {
+            resultado += "carne = " + carne+ "\\" ;
+        }  if (lechuga != null) {
+            resultado += "lechuga = " + lechuga+ "\\" ;
+        }  if (tomate != null) {
+            resultado += "tomate = " + tomate+ "\\" ;
+        }  if (queso != null) {
+            resultado +="queso = " + queso+ "\\" ;
+        }  if (mayonesa != null) {
+            resultado += "mayonesa = " + mayonesa+ "\\";
+        }  if (mostaza != null) {
+            resultado += "mostaza = " + mostaza+ "\\" ;
+        }  if (ketchup != null) {
+            resultado += "kechtup = " + ketchup+ "\\" + "}" ;
+        }
+        return resultado;
     }
 }
 
