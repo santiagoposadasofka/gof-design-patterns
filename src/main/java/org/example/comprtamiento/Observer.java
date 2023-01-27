@@ -8,6 +8,7 @@ import java.util.List;
 /**
  * Permite notificar a todos los interesados sobre un cambio.
  * */
+
 interface Observer {
     void update(float temp, float humedad, float presion);
 }

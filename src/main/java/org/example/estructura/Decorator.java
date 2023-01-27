@@ -1,10 +1,22 @@
 package org.example.estructura;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Decorator {
 
     /**
      * Permite a partir de una base añadir funciones o informacion adicional
      * */
+    public void ejecutar(){
+      Cafe cafe = new Cafe();
+        System.out.println(cafe.costo());
+        System.out.println(cafe.getDescripcion());
+        Leche leche = new Leche(cafe);
+        System.out.println(leche.getDescripcion());
+        System.out.println(leche.costo());
+
+    }
 }
 
 
@@ -20,6 +32,7 @@ abstract class Bebida {
 
 class Cafe extends Bebida {
     public Cafe() {
+
         descripcion = "Café";
     }
 
