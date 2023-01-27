@@ -22,10 +22,22 @@ public class Mediator {
         mediator.agregarUsuario(user2);
         mediator.agregarUsuario(user3);
 
+        mediator.enviarMensaje("mensaje de prueva", user1);
 
         user1.enviarMensaje("soy user1");
         user2.enviarMensaje("yo user2");
         user3.enviarMensaje("asi yo user3");
+
+        List<String> usuarios = new ArrayList<>();
+        usuarios.add("user4");
+        usuarios.add(("user5"));
+        usuarios.add("user6");
+        usuarios.add("user7");
+        usuarios.add("user8");
+
+        for (String user: usuarios) {
+            System.out.println("los usuarios son:" + " : "+ usuarios);
+        }
 
     }
 }
