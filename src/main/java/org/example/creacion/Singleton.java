@@ -11,6 +11,10 @@ public class Singleton {
 
     public void ejecutar() {
 
+            Configuracion configuracion = new Configuracion();
+            configuracion.getValor1();
+            configuracion.getValor2();
+
 
 
 
@@ -25,8 +29,9 @@ class Configuracion {
     private String valor1 = "default";
     private String valor2 = "default";
 
-    private Configuracion() {
+    Configuracion() {
     }
+
 
     public static Configuracion getInstancia() {
         if (instancia == null) {

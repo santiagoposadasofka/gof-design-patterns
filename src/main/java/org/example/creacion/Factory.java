@@ -24,6 +24,8 @@ public class Factory {
         FiguraGeometrica figura3 = factory.crearFiguraGeometrica("CIRCULO");
         figura3.dibujar();
 
+        figura1.dibujar();
+
     }
 }
 

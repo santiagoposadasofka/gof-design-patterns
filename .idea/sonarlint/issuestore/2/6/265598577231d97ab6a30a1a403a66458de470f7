@@ -1,0 +1,11 @@
+
+R
+java:S1854!"<Remove this useless assignment to local variable "imagen33".(ÊşÎÛ
+C
+java:S1481!"-Remove this unused "imagen33" local variable.(ÊşÎÛ
+M	java:S1067"9Replace this use of System.out or System.err by a logger.(‚òĞ9
+S	java:S106;"9Replace this use of System.out or System.err by a logger.(àœÆıÿÿÿÿ
+M
+java:S1128"0Remove this unused import 'java.util.ArrayList'.(÷‰îƒ8½™±‡ß0
+M
+java:S1128"+Remove this unused import 'java.util.List'.(Õë±Äøÿÿÿÿ8¾™±‡ß0

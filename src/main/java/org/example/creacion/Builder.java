@@ -123,4 +123,11 @@ class ComidaBuilder {
     public Comida build() {
         return this.comida;
     }
+
+    @Override
+    public String toString() {
+        return "ComidaBuilder{" +
+                "comida=" + comida +
+                '}';
+    }
 }
