@@ -6,7 +6,7 @@ import java.util.List;
 public class Strategy {
 
     /**
-     * Permite definir un proposito pero dependiendo del contexto implementarlo.
+     * Permite definir un proposito pero dependiendo del contexto implementarlo. falta
      * */
 }
 

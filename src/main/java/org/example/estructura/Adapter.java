@@ -1,5 +1,8 @@
 package org.example.estructura;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Adapter {
     /**
      * Permite cerrar brechas o transformar un elemento que
@@ -10,8 +13,30 @@ public class Adapter {
 
     public void ejecutar() {
 
+        /**
 
-        System.out.println("mensaje");
+         List<ReproductorDeAudio> reproductores = new ArrayList<>();
+         reproductores.add(new ReproductorMp3());
+         reproductores.add(new ReproductorWav());
+         reproductores.add(new AdaptadorDeAudio());
+
+         for (ReproductorDeAudio reproductor : reproductores) {
+         reproductor.reproducir("la vaca loca.mp3");
+         reproductor.reproducir("el dia");
+         reproductor.reproducir("amor");
+
+         }
+         */
+
+        ReproductorDeAudio reproductorMp3 = new ReproductorMp3();
+        ReproductorDeAudio reproductorWav = new ReproductorWav();
+        ReproductorDeAudio adaptadorDeAudio = new AdaptadorDeAudio();
+
+        reproductorMp3.reproducir("song.mp3"); // Reproduciendo archivo MP3: song.mp3
+        reproductorWav.reproducir("song.wav"); // Reproduciendo archivo WAV:song.wav
+        adaptadorDeAudio.reproducir("song.wav"); // Reproduciendo archivo MP3:song.mp3
+
+
     }
 
 }
