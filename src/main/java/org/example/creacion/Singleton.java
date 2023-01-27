@@ -8,6 +8,23 @@ public class Singleton {
      * todos quien lo requieran tengan que tomar la informacion a partir de este,
      * evitando que hayan diferencias entre los interesados a la hora de tomar informacion
      * */
+
+    /**
+     * Para poder acceder al método getInstancia, se crea el método estático getInfo.
+     * El método getInfo, utiliza también los métodos getValor1 y getValor2 para acceder a los atributos de la clase
+     * Configuracion
+     */
+
+    public static void getInfo(){
+        /**
+         * Toda la información sobre la clase Configuración se obtiene de la única instancia que se crea.
+         * Si la instancia no existe, al llamar al método getInstancia, esta se crea.
+         */
+        String valor1 = Configuracion.getInstancia().getValor1();
+        System.out.println("El valor 1 es " + valor1);
+        String valor2 = Configuracion.getInstancia().getValor2();
+        System.out.println("El valor 2 es " + valor2);
+    }
 }
 
 

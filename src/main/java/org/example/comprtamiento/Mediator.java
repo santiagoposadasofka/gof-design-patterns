@@ -7,7 +7,16 @@ public class Mediator {
 
     /**
      * Permite interactuar con diferentes objetos por medio de un intermediario.
+     * Se agrega el método enviar, con el fin de crear una instancia de la clase ChatRoom y de la clase UsuarioNormal.
+     * Esto permite utilizar el método agregarUsuario y enviarMensaje
      * */
+
+    public void enviar(){
+        ChatRoom chatRoom = new ChatRoom();
+        Usuario usuario1 = new UsuarioNormal(chatRoom, "Checho");
+        chatRoom.agregarUsuario(usuario1);
+        usuario1.enviarMensaje("Hola buenos días para todos en el chat!!!");
+    }
 }
 
 

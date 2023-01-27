@@ -5,9 +5,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-/**
- * Permite notificar a todos los interesados sobre un cambio.
- * */
 interface Observer {
     void update(float temp, float humedad, float presion);
 }
@@ -56,6 +53,18 @@ class Clima implements Subject {
         this.humedad = humedad;
         this.presion = presion;
         medidasChanged();
+    }
+
+    public float getTemp(){
+        return this.temp;
+    }
+
+    public float getHumedad(){
+        return this.humedad;
+    }
+
+    public float getPresion(){
+        return this.presion;
     }
 
     public void medidasChanged() {

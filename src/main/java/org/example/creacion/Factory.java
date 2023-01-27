@@ -6,6 +6,19 @@ public class Factory {
      * Simplifica el proceso de construccion de objetos,
      * en este caso por medio de un parametro "tipo" construimos el objeto esperado.
      * */
+
+    public void crearFigura() {
+        /**
+         * Para crear un circulo y un cuadrado, se crea una instancia de FiguraGemetricaFactory
+         * para acceder al método crearFiguraGemetrica. En este se define que tipo de figura se crea, ya sea
+         * un Circulo, cuadrado o triangulo.
+         */
+        FiguraGeometricaFactory figuraFactory = new FiguraGeometricaFactory();
+        figuraFactory.crearFiguraGeometrica("CIRCULO").dibujar();
+
+        FiguraGeometricaFactory figuraFactory2 = new FiguraGeometricaFactory();
+        figuraFactory2.crearFiguraGeometrica("CUADRADO").dibujar();
+    }
 }
 
 
