@@ -11,7 +11,7 @@ public class Decorator {
     public void prepararBebida(){
         Cafe cafeConLeche = new Cafe();
         Leche adicional = new Leche(cafeConLeche);
-        System.out.println("Se está preparando un " + adicional.getDescripcion());
+        System.out.println("Se está preparando un " + adicional.getDescripcion() + " y tiene un costo de " + cafeConLeche.costo());
     }
 }
 

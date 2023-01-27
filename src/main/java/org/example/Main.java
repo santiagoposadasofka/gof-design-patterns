@@ -5,6 +5,7 @@ import org.example.creacion.Factory;
 import org.example.creacion.Singleton;
 import org.example.estructura.Adapter;
 import org.example.estructura.Decorator;
+import org.example.estructura.Proxy;
 
 import java.lang.module.Configuration;
 
@@ -23,7 +24,7 @@ public class Main {
 
         /**
          * En este caso, no se crea una instancia de la clase Singleton para acceder al método getInfo.
-         * El método getInfo() es estático, por esto se debe acceder desde un contexto estático
+         * El método getInfo() es estático, por esto se debe acceder desde un contexto estático.
          */
         Singleton.getInfo();
 
@@ -36,6 +37,11 @@ public class Main {
 
         Decorator decorator = new Decorator();
         decorator.prepararBebida();
+
+        System.out.println("---------------------------------------------------------------------------------------");
+
+        Proxy proxy = new Proxy();
+        proxy.mostrarImagen();
 
     }
 }
