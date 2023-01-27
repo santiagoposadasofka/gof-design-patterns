@@ -13,7 +13,10 @@ public class ObserverEjecutar {
     public void ejecutar(){
 
         Clima clima = new Clima();
+        CondicionesActuales condicionesActuales = new CondicionesActuales(27,18,22);
+        clima.registerObserver(condicionesActuales);
         clima.setMedidas(27, 18, 22);
+        System.out.println("Nueva notificación: " + condicionesActuales.toString());
 
 
     }
