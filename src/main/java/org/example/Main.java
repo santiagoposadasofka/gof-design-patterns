@@ -3,6 +3,7 @@ package org.example;
 import org.example.creacion.Builder;
 import org.example.creacion.Factory;
 import org.example.creacion.Singleton;
+import org.example.estructura.Decorator;
 import org.example.estructura.Proxy;
 
 import java.util.Scanner;
@@ -32,6 +33,10 @@ public class Main {
                     System.out.println("    Proxy");
                     Proxy proxy = new Proxy();
                     proxy.ejecutar();
+                    System.out.println("    Decorator");
+                    Decorator decorator= new Decorator();
+                    decorator.ejecutar();
+
                     break;
                 case 3:
                     break;
