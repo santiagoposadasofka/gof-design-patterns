@@ -7,7 +7,11 @@ package org.example.estructura;
 
 public class Proxy {
     public void ejecutar() {
-        //...
+        // Se utilizan los elementos prediseñados para aplicar el patrón
+        Imagen imagenSinFiltro = new ImagenReal("Imagen sin filtro.png");
+        imagenSinFiltro.mostrar();
+        Imagen imagenConFiltro = new ImagenProxy("Imagen con filtro.png");
+        imagenConFiltro.mostrar();
     }
 }
 
