@@ -7,6 +7,14 @@ public class Proxy {
      * para asi validar informacion, permisos o lo que sea de interes antes
      * de permitit el acceso a la información
      * */
+
+    public void Ejecutar(){
+        ImagenReal imagenReal = new ImagenReal("//miEscritorio");
+        ImagenProxy imagenProxy = new ImagenProxy("http://holis");
+        imagenProxy.mostrar();
+        imagenReal.mostrar();
+
+    }
 }
 
 interface Imagen {

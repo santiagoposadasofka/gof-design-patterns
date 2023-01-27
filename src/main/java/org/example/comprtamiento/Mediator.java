@@ -10,12 +10,14 @@ public class Mediator {
      * */
     public void Ejecutar(){
         ChatMediator chatMediator = new ChatRoom();
-        UsuarioNormal usuarioNormal =new UsuarioNormal(chatMediator,"juanita");
-        chatMediator.agregarUsuario(usuarioNormal);
-        //chatMediator.enviarMensaje("hola estoy enviando",usuarioNormal); ¿porque no tengo necesidad de ponerlo?
-        usuarioNormal.enviarMensaje("estabas lindo hoy");
-        usuarioNormal.recibirMensaje("ya lo se mijo");
+        Usuario number1 =new UsuarioNormal(chatMediator,"juanita");
+        Usuario number2= new UsuarioNormal(chatMediator,"Luisito");
 
+        chatMediator.agregarUsuario(number1);
+        chatMediator.agregarUsuario(number2);
+
+        number1.enviarMensaje("me siento muy feliz");
+        number2.enviarMensaje("estabas muy linda hoy ;)");
 
     }
 }
@@ -75,6 +77,6 @@ class UsuarioNormal extends Usuario {
 
     @Override
     public void recibirMensaje(String mensaje){
-        System.out.println(mensaje);
+        //System.out.println(mensaje); ya estoy imprimiendo antes
     }
 }

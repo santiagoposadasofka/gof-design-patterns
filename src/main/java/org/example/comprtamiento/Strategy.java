@@ -11,12 +11,6 @@ public class Strategy {
      * Permite definir un proposito pero dependiendo del contexto implementarlo.
      * */
     public void Ejecutar(){
-        //MALO
-        //CompressionStrategy compressionStrategy =new ZipCompressionStrategy();
-        //RarCompressionStrategy rarCompressionStrategy = new RarCompressionStrategy();
-        //CompressionContext compressionContext = new CompressionContext();
-
-        //compressionContext.createArchive();
 
         //BUENO
         List<File> files = Arrays.asList(new File("file#1.txt"), new File("file#2.txt"));
