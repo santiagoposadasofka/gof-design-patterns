@@ -12,11 +12,16 @@ public class ObserverEjecutar {
 
     public void ejecutar(){
 
-        Clima clima = new Clima();
-        CondicionesActuales condicionesActuales = new CondicionesActuales(27,18,22);
-        clima.registerObserver(condicionesActuales);
-        clima.setMedidas(27, 18, 22);
-        System.out.println("Nueva notificación: " + condicionesActuales.toString());
+        Clima lectorTemp = new Clima();
+        CondicionesActuales piso1 = new CondicionesActuales();
+        CondicionesActuales piso2 = new CondicionesActuales();
+
+        lectorTemp.registerObserver(piso1);
+        lectorTemp.registerObserver(piso2);
+
+        lectorTemp.setMedidas(23, 20, 19);
+        System.out.println("Cambiamos a temperatura que excede limite del aire acondicionado" + piso1.toString() );
+        lectorTemp.setMedidas(28, 20, 19);
 
 
     }
@@ -40,6 +45,16 @@ class Clima implements Subject {
     private float temp;
     private float humedad;
     private float presion;
+
+    @Override
+    public String toString() {
+        return "Clima{" +
+                "observadores=" + observadores +
+                ", temp=" + temp +
+                ", humedad=" + humedad +
+                ", presion=" + presion +
+                '}';
+    }
 
     public Clima() {
         observadores = new ArrayList<>();
@@ -79,17 +94,21 @@ class CondicionesActuales implements Observer, DisplayElement {
     private float humedad;
     private float presion;
 
-    public CondicionesActuales(float temp, float humedad, float presion) {
-        this.temp = temp;
-        this.humedad = humedad;
-        this.presion = presion;
-    }
+    public CondicionesActuales() {
+       }
 
     @Override
     public void update(float temp, float humedad, float presion) {
         this.temp = temp;
+        if (temp > 27){
+            System.out.println("Se prendieron los aires acondicionados");
+
+        } else {
+            System.out.println("Los aires acondicionados siguen apagados");
+        }
         this.humedad = humedad;
         this.presion = presion;
+        this.display();
     }
 
     @Override
