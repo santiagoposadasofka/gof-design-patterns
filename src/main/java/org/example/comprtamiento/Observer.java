@@ -94,4 +94,22 @@ class CondicionesActuales implements Observer, DisplayElement {
                 ", presion=" + presion +
                 '}';
     }
+
+    /**
+     *
+     * Instancia de elejemplos patrones de comportamiento observer
+     */
+    public static void main(String[] args) {
+
+        CondicionesActuales condicionesActuales = new CondicionesActuales(12,12,20);
+
+        Clima clima = new Clima();
+        clima.registerObserver(condicionesActuales);
+        clima.notifyObservers();
+
+        condicionesActuales.update(34,34,34);
+        condicionesActuales.toString();
+
+    }
+
 }

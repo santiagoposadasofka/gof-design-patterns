@@ -8,6 +8,14 @@ public class Singleton {
      * todos quien lo requieran tengan que tomar la informacion a partir de este,
      * evitando que hayan diferencias entre los interesados a la hora de tomar informacion
      * */
+
+    public void ejecutar(){
+        Configuracion configuracion = Configuracion.getInstancia();
+        configuracion.getValor1();
+        configuracion.getValor2();
+        configuracion.setValor1("hola");
+        configuracion.setValor2("hola3");
+    }
 }
 
 
@@ -41,4 +49,5 @@ class Configuracion {
     public void setValor2(String valor2) {
         this.valor2 = valor2;
     }
+
 }
