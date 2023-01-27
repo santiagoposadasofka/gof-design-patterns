@@ -4,7 +4,11 @@ package org.example.estructura;
 
 public class Decorator {
     public void ejecutar() {
-        //...
+        // Se utilizan los elementos prediseñados para aplicar el patrón
+        Bebida cafe = new Cafe();
+        System.out.println(cafe.getDescripcion() + " de $" + cafe.costo());
+        Adicional leche = new Leche(cafe);
+        System.out.println(leche.getDescripcion() + " de $" + leche.costo());
     }
 }
 
@@ -41,7 +45,7 @@ class Leche extends Adicional {
     }
 
     public String getDescripcion() {
-        return bebida.getDescripcion() + ", Leche";
+        return bebida.getDescripcion() + "con Leche";
     }
 
     public double costo() {

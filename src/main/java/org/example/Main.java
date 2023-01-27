@@ -12,6 +12,7 @@ import org.example.estructura.Proxy;
 
 public class Main {
     public static void main(String[] args) {
+        System.out.println("Ejecutando ejemplos del patrón de Comportamiento.");
         // Se ejecutan los ejemplos de uso de este patrón
         Mediator mediator = new Mediator();
         mediator.ejecutar();
@@ -27,6 +28,7 @@ public class Main {
         strategy.ejecutar();
         System.out.println("\n< - - - >");
 
+        System.out.println("Ejecutando ejemplos del patrón de Creación.");
         // Se ejecutan los ejemplos de uso de este patrón
         Builder builder = new Builder();
         builder.ejecutar();
@@ -42,6 +44,7 @@ public class Main {
         singleton.ejecutar();
         System.out.println("\n< - - - >");
 
+        System.out.println("Ejecutando ejemplos del patrón de Estructura.");
         // Se ejecutan los ejemplos de uso de este patrón
         Adapter adapter = new Adapter();
         adapter.ejecutar();
@@ -55,6 +58,5 @@ public class Main {
         // Se ejecutan los ejemplos de uso de este patrón
         Proxy proxy = new Proxy();
         proxy.ejecutar();
-        System.out.println("\n< - - - >");
     }
 }

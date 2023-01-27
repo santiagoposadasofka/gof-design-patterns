@@ -7,7 +7,18 @@ package org.example.estructura;
 
 public class Adapter {
     public void ejecutar() {
-        //...
+        // Se utilizan los elementos prediseñados para aplicar el patrón
+        String cancionMP3 = "Adonay.mp3";
+        String cancionWAV = "Limoncito con Ron.wav";
+        ReproductorDeAudio mp3 = new ReproductorMp3();
+        ReproductorDeAudio wav = new ReproductorWav();
+        mp3.reproducir(cancionMP3);
+        mp3.reproducir(cancionWAV);
+        wav.reproducir(cancionWAV);
+        wav.reproducir(cancionMP3);
+        ReproductorDeAudio adaptador = new AdaptadorDeAudio();
+        adaptador.reproducir(cancionMP3);
+        adaptador.reproducir(cancionWAV);
     }
 }
 
@@ -22,7 +33,8 @@ class ReproductorMp3 implements ReproductorDeAudio {
             System.out.println("Reproduciendo archivo MP3: " + archivo);
             return;
         }
-        throw new IllegalArgumentException("Formato invalido");
+        // throw new IllegalArgumentException("Formato invalido");
+        System.out.println("Formato invalido");
     }
 }
 
@@ -33,7 +45,8 @@ class ReproductorWav implements ReproductorDeAudio {
             System.out.println("Reproduciendo archivo WAV: " + archivo);
             return;
         }
-        throw new IllegalArgumentException("Formato invalido");
+        // throw new IllegalArgumentException("Formato invalido");
+        System.out.println("Formato invalido");
     }
 }
 
@@ -46,6 +59,8 @@ class AdaptadorDeAudio implements ReproductorDeAudio {
         if (archivo.endsWith(".wav")) {
             nuevoFormato = archivo.substring(0, archivo.lastIndexOf(".")) + ".mp3";
             reproductorMp3.reproducir(nuevoFormato);
+        } else if (archivo.endsWith(".mp3")) {
+            reproductorMp3.reproducir(archivo);
         }
     }
 }
