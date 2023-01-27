@@ -1,6 +1,16 @@
 package org.example.estructura;
 
 public class Adapter {
+
+    public void ejecutar (){
+
+        AdaptadorDeAudio adaptador = new AdaptadorDeAudio();
+        try {
+            adaptador.reproducir("audio.wav");
+        } catch (IllegalArgumentException e) {
+            System.out.println(e.getMessage());
+        }
+    }
     /**
      * Permite cerrar brechas o transformar un elemento que
      * esta desarrollado o escrito en un leguaje ajeno para que pueda
@@ -47,3 +57,4 @@ class AdaptadorDeAudio implements ReproductorDeAudio {
         }
     }
 }
+
