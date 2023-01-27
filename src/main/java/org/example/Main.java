@@ -1,7 +1,13 @@
 package org.example;
 
+import org.example.estructura.Decorator;
+import org.example.estructura.Proxy;
+
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        Proxy.ejecutar();
+        System.out.println("\n");
+        Decorator.ejecutar();
+        System.out.println("\n");
     }
 }
