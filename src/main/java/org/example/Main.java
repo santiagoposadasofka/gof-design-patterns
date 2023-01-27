@@ -1,5 +1,6 @@
 package org.example;
 
+import org.example.comprtamiento.Strategy;
 import org.example.creacion.Builder;
 import org.example.creacion.ComidaBuilder;
 import org.example.creacion.Factory;
@@ -24,7 +25,12 @@ public class Main {
         Singleton singleton = new Singleton();
         singleton.ejecutar();
 
+        System.out.println();
 
+        Strategy strategy = new Strategy();
+        strategy.ejecutarZip();
+
+        System.out.println();
 
 
     }
