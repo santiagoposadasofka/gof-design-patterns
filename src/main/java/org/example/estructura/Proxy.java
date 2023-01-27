@@ -7,6 +7,12 @@ public class Proxy {
      * para asi validar informacion, permisos o lo que sea de interes antes
      * de permitit el acceso a la información
      * */
+
+    public void ejecutar(String rutaArchivo) {
+        Imagen imagen = new ImagenProxy(rutaArchivo);
+        imagen.mostrar();
+    }
+
 }
 
 interface Imagen {

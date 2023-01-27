@@ -8,6 +8,18 @@ import java.util.List;
 /**
  * Permite notificar a todos los interesados sobre un cambio.
  * */
+
+public class Observador{
+    public static void ejecutar() {
+        Clima clima = new Clima();
+        CondicionesActuales display1 = new CondicionesActuales(80, 65, 30.4f);
+        clima.registerObserver(display1);
+        clima.setMedidas(80, 65, 30.4f);
+        System.out.println(display1.toString());
+    }
+
+}
+
 interface Observer {
     void update(float temp, float humedad, float presion);
 }
@@ -19,7 +31,6 @@ interface Subject {
 }
 
 
-
 interface DisplayElement {
     void display();
 }
@@ -29,6 +40,7 @@ class Clima implements Subject {
     private float temp;
     private float humedad;
     private float presion;
+
 
     public Clima() {
         observadores = new ArrayList<>();
@@ -67,6 +79,7 @@ class CondicionesActuales implements Observer, DisplayElement {
     private float temp;
     private float humedad;
     private float presion;
+
 
     public CondicionesActuales(float temp, float humedad, float presion) {
         this.temp = temp;

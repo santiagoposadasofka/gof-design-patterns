@@ -5,8 +5,12 @@ public class Decorator {
     /**
      * Permite a partir de una base añadir funciones o informacion adicional
      * */
+    public void ejecutar() {
+        Bebida bebida = new Cafe();
+        bebida = new Leche(bebida);
+        System.out.println(bebida.getDescripcion() + " $" + bebida.costo());
+    }
 }
-
 
 abstract class Bebida {
     String descripcion = "Bebida desconocida";
