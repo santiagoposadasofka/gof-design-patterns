@@ -1,6 +1,7 @@
 package org.example;
 
 import org.example.comprtamiento.Ejecutar;
+import org.example.comprtamiento.Mediator;
 import org.example.comprtamiento.Strategy;
 import org.example.creacion.Builder;
 import org.example.creacion.Factory;
@@ -29,5 +30,6 @@ public class Main {
         System.out.println("\n");
         Ejecutar.ejecutar();
         System.out.println("\n");
+        Mediator.ejecutar();
     }
 }
