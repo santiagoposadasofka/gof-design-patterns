@@ -1,5 +1,6 @@
 package org.example;
 
+import org.example.creacion.Singleton;
 import org.example.estructura.Adapter;
 import org.example.estructura.Decorator;
 import org.example.estructura.Proxy;
@@ -11,6 +12,8 @@ public class Main {
         Decorator.ejecutar();
         System.out.println("\n");
         Adapter.ejecutar();
+        System.out.println("\n");
+        Singleton.ejecutar();
         System.out.println("\n");
     }
 }

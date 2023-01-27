@@ -1,15 +1,44 @@
 package org.example.creacion;
 
 public class Singleton {
-
     /**
      * Nos permite asegurar que solo haya una instancia de un objeto esperado,
-     * ya sea por que queremos que solo haya un objeto de este tipo y que a partir de el,
-     * todos quien lo requieran tengan que tomar la informacion a partir de este,
-     * evitando que hayan diferencias entre los interesados a la hora de tomar informacion
+     * ya sea porque queremos que solo haya un objeto de este tipo y que a partir de él,
+     * todos quien lo requieran tengan que tomar la información a partir de este,
+     * evitando que haya diferencias entre los interesados a la hora de tomar información
      * */
+    public static void ejecutar(){
+        Configuracion.getInstancia().setValor1("Hola Mundo");
+        System.out.println(Configuracion.getInstancia().getValor1());
+        BaseDeDatos.getBaseDeDatos().setUsuario("ivanDario19");
+        BaseDeDatos.getBaseDeDatos().setContraseña("MsjiDJIDasjdw12");
+        System.out.println(BaseDeDatos.getBaseDeDatos().getUsuario()+" "+BaseDeDatos.getBaseDeDatos().getContraseña());
+    }
 }
-
+class BaseDeDatos{
+    private static BaseDeDatos baseDeDatos=null;
+    private String Usuario;
+    private String Contraseña;
+    private BaseDeDatos(){
+    }
+    public static BaseDeDatos getBaseDeDatos(){
+        if (baseDeDatos==null)
+            baseDeDatos=new BaseDeDatos();
+        return baseDeDatos;
+    }
+    public String getUsuario() {
+        return Usuario;
+    }
+    public void setUsuario(String usuario) {
+        Usuario = usuario;
+    }
+    public String getContraseña() {
+        return Contraseña;
+    }
+    public void setContraseña(String contraseña) {
+        Contraseña = contraseña;
+    }
+}
 
 class Configuracion {
     private static Configuracion instancia = null;

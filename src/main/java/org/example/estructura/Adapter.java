@@ -9,7 +9,6 @@ public class Adapter {
     public static void ejecutar(){
         ReproductorDeAudio reproductorDeAudio=new AdaptadorDeAudio();
         reproductorDeAudio.reproducir("Salsita.wav");
-        System.out.println("\n");
         SistemaOperativo sistema=new Windows();
         sistema.ejecutarPrograma();
         SistemaOperativoNuevo linux=new SistemaOperativoAdapter(sistema);
