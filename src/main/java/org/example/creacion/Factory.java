@@ -2,6 +2,18 @@ package org.example.creacion;
 
 public class Factory {
 
+    public void ejecutar () {
+        FiguraGeometricaFactory factory = new FiguraGeometricaFactory();
+        FiguraGeometrica cuadrado = factory.crearFiguraGeometrica("cuadrado");
+        FiguraGeometrica triangulo = factory.crearFiguraGeometrica("triangulo");
+        FiguraGeometrica circulo = factory.crearFiguraGeometrica("circulo");
+
+        cuadrado.dibujar();
+        triangulo.dibujar();
+        circulo.dibujar();
+
+    }
+
     /**
      * Simplifica el proceso de construccion de objetos,
      * en este caso por medio de un parametro "tipo" construimos el objeto esperado.
@@ -51,3 +63,4 @@ class FiguraGeometricaFactory {
         }
     }
 }
+
