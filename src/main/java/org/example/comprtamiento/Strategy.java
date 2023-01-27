@@ -16,14 +16,12 @@ public class Strategy {
         context.setCompressionStrategy(new ZipCompressionStrategy());
         // Crea un archivo comprimido con los archivos de la lista
         context.createArchive(files);
-
     }
 
     /**
      * Permite definir un proposito pero dependiendo del contexto implementarlo.
      * */
 }
-
 
 interface CompressionStrategy {
     void compressFiles(List<File> files);
