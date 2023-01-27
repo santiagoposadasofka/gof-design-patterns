@@ -7,23 +7,51 @@ import java.util.List;
 
 /**
  * Permite notificar a todos los interesados sobre un cambio.
- * */
+ */
+
+public class ObserverPatron {
+
+    /**
+     * Método que permite ejecutar la clase Observer Patron
+     */
+    public void ejecutarObserver (){
+        Clima clima = new Clima();
+        CondicionesActuales condicionesActuales = new CondicionesActuales(49, 78,39);
+        clima.registerObserver(condicionesActuales);
+        clima.setMedidas(29,46,78);
+        System.out.println(condicionesActuales);
+
+    }
+}
+
+/**
+ * Interface Observer la cual contiene el método modificar
+ */
 interface Observer {
     void update(float temp, float humedad, float presion);
 }
 
+/**
+ * Interface Subject la cual contiene los métodos: registrar, remover y notificar.
+ */
 interface Subject {
     void registerObserver(Observer o);
+
     void removeObserver(Observer o);
+
     void notifyObservers();
 }
 
-
-
+/**
+ * Interface display element
+ */
 interface DisplayElement {
     void display();
 }
 
+/**
+ * Clase clima la cual implementa la interface Subject
+ */
 class Clima implements Subject {
     private List<Observer> observadores;
     private float temp;
@@ -63,6 +91,9 @@ class Clima implements Subject {
     }
 }
 
+/**
+ * Clase condiciones actuales la cual implementa las interfaces de observer y display element
+ */
 class CondicionesActuales implements Observer, DisplayElement {
     private float temp;
     private float humedad;
@@ -88,10 +119,9 @@ class CondicionesActuales implements Observer, DisplayElement {
 
     @Override
     public String toString() {
-        return "CondicionesActuales{" +
-                "temp=" + temp +
-                ", humedad=" + humedad +
-                ", presion=" + presion +
-                '}';
+        return "Condiciones actuales ☼⛅ " + "\n" +
+                "Temperatura = " + temp + "\n" +
+                "Humedad = " + humedad + "\n" +
+                "Presión = " + presion;
     }
 }

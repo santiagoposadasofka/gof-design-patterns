@@ -1,30 +1,34 @@
 package org.example.creacion;
 
 public class Builder {
-
     /**
      * Nos permite construir un objeto con diferentes niveles de especificidad,
      * o con diferente cantidad de atributos de forma facil y legible.
-     * */
+     */
 
-
-    Comida sanducheSencillo = new ComidaBuilder()
-            .carne("jamon")
-            .lechuga("crespa")
-            .queso("Mozarella").build();
-
-    Comida sanducheFull = new ComidaBuilder()
-            .carne("Res")
-            .tomate("en rodajas")
-            .lechuga("crespa")
-            .tomate("Mozarella")
-            .mostaza("Mucha")
-            .ketchup("poca")
-            .build();
+    /**
+     * Método que permite ejecutar el patrón de Builder
+     */
+    public void ejecutarBuilder() {
+        Comida sandwichMediano = new ComidaBuilder()
+                .carne("pollo")
+                .lechuga("crespa")
+                .ketchup("poco")
+                .pan("artesanal")
+                .mayonesa("mucha")
+                .build();
+        System.out.println(sandwichMediano.toString());
+    }
 }
 
-
+/**
+ * Clase comida
+ */
 class Comida {
+
+    /**
+     * Atributos que permiten definir la clase comida
+     */
     private String pan;
     private String carne;
     private String lechuga;
@@ -34,6 +38,9 @@ class Comida {
     private String mostaza;
     private String ketchup;
 
+    /**
+     * Métodos setters
+     */
     public void setPan(String pan) {
         this.pan = pan;
     }
@@ -65,11 +72,34 @@ class Comida {
     public void setKetchup(String ketchup) {
         this.ketchup = ketchup;
     }
+
+    /**
+     * Método toString el cual permite almacenar datos e imprimirlos en un texto (cadena de caracteres).
+     */
+    @Override
+    public String toString() {
+        return "Así quedó el sandwich que elegiste: \uD83E\uDD6A\n" +
+                "Pan --> " + pan + "\n" +
+                "Carne --> " + carne + "\n" +
+                "Lechuga --> " + lechuga + "\n" +
+                "Tomate --> " + tomate + "\n" +
+                "Queso --> " + queso + "\n" +
+                "Mayonesa --> " + mayonesa + "\n" +
+                "Mostaza --> " + mostaza + "\n" +
+                "Ketchup --> " + ketchup + "\n" +
+                "¡Buen provecho!";
+    }
 }
 
+/**
+ * Clase comida Builder, permite crear instancias de la clase comida s
+ */
 class ComidaBuilder {
     private Comida comida;
 
+    /**
+     * Constructor
+     */
     public ComidaBuilder() {
         comida = new Comida();
     }
@@ -114,7 +144,14 @@ class ComidaBuilder {
         return this;
     }
 
-    public Comida build(){
+    public Comida build() {
         return this.comida;
+    }
+
+    @Override
+    public String toString() {
+        return "ComidaBuilder{" +
+                "comida=" + comida +
+                '}';
     }
 }
