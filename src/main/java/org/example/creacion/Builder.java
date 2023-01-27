@@ -25,7 +25,7 @@ public class Builder {
                 .ketchup("poca")
                 .build();
 
-        System.out.println("la comida es " + sanducheFull);
+        System.out.println("la comida es " + sanducheFull.toString());
     }
 }
 
@@ -70,6 +70,21 @@ class Comida {
 
     public void setKetchup(String ketchup) {
         this.ketchup = ketchup;
+    }
+
+
+    @Override
+    public String toString() {
+        return "Comida{" +
+                "pan='" + pan + '\'' +
+                ", carne='" + carne + '\'' +
+                ", lechuga='" + lechuga + '\'' +
+                ", tomate='" + tomate + '\'' +
+                ", queso='" + queso + '\'' +
+                ", mayonesa='" + mayonesa + '\'' +
+                ", mostaza='" + mostaza + '\'' +
+                ", ketchup='" + ketchup + '\'' +
+                '}';
     }
 }
 

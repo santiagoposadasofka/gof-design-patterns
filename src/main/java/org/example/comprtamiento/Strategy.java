@@ -18,26 +18,29 @@ public class Strategy {
         context.setCompressionStrategy(new ZipCompressionStrategy());
 
         List<File> files = new ArrayList<>();
-        files.add(new File("ejemplo1.pdf"));
-        files.add(new File("ejemplo2.jpg"));
-        files.add(new File("ejemplo1.png"));
+        files.add(new File("ejemplo1.rar"));
+        files.add(new File("ejemplo2.zip"));
+        files.add(new File("ejemplo1.zip"));
 
         //agregar archivos a la lista
 
         context.createArchive(files);
-        System.out.println(files);
+        System.out.println(files.toString());
     }
 }
 
 
 interface CompressionStrategy {
     void compressFiles(List<File> files);
+
+
 }
 
 class ZipCompressionStrategy implements CompressionStrategy {
     public void compressFiles(List<File> files) {
         // implementación del algoritmo de compresión ZIP
     }
+
 }
 
 class RarCompressionStrategy implements CompressionStrategy {
@@ -55,5 +58,12 @@ class CompressionContext {
 
     public void createArchive(List<File> files) {
         strategy.compressFiles(files);
+    }
+
+    @Override
+    public String toString() {
+        return "CompressionContext{" +
+                "strategy=" + strategy +
+                '}';
     }
 }

@@ -25,6 +25,22 @@ interface DisplayElement {
     void display();
 }
 
+public class ObserverEjecutar {
+    public void ejecutar() {
+        Clima clima = new Clima();
+        CondicionesActuales condicionesActuales = new CondicionesActuales();
+
+        clima.registerObserver(condicionesActuales);
+
+        clima.setMedidas(32, 25, 50);
+
+        condicionesActuales.display();
+
+        System.out.println("cambiamos a temperatura para encender los aires" + condicionesActuales.toString());
+    }
+}
+
+
 class Clima implements Subject {
     private List<Observer> observadores;
     private float temp;
@@ -64,16 +80,6 @@ class Clima implements Subject {
         notifyObservers();
     }
 
-    public void ejecutar() {
-        Clima clima = new Clima();
-        CondicionesActuales condicionesActuales = new CondicionesActuales(1, 1, 1);
-        clima.registerObserver(condicionesActuales);
-
-        clima.setMedidas(32, 25, 50);
-        condicionesActuales.display();
-        System.out.println(condicionesActuales.toString());
-    }
-
 
 }
 
@@ -82,17 +88,20 @@ class CondicionesActuales implements Observer, DisplayElement {
     private float humedad;
     private float presion;
 
-    public CondicionesActuales(float temp, float humedad, float presion) {
-        this.temp = temp;
-        this.humedad = humedad;
-        this.presion = presion;
+    public CondicionesActuales() {
+
     }
 
     @Override
     public void update(float temp, float humedad, float presion) {
         this.temp = temp;
+        if (temp > 27) {
+            System.out.println("encender los aires");
+        }
+
         this.humedad = humedad;
         this.presion = presion;
+        this.display();
     }
 
     @Override

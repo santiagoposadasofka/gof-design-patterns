@@ -28,7 +28,7 @@ public class Factory {
 
         FiguraGeometricaFactory figuraGeometricaFactory = new FiguraGeometricaFactory();
         figuraGeometricaFactory.crearFiguraGeometrica("CUADRADO");
-        System.out.println("la figura geometric creada es" + ":" + figuraGeometricaFactory);
+        System.out.println("la figura geometric creada es" + ":" + figuraGeometricaFactory.toString());
 
     }
 }
@@ -43,6 +43,7 @@ class Cuadrado implements FiguraGeometrica {
     public void dibujar() {
         System.out.println("Dibujando un cuadrado");
     }
+
 }
 
 class Triangulo implements FiguraGeometrica {

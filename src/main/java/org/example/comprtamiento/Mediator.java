@@ -11,33 +11,19 @@ public class Mediator {
 
 
     public void ejecutar() {
+        ChatRoom sala = new ChatRoom();
 
-        ChatMediator mediator = new ChatRoom();
-        Usuario user1 = new UsuarioNormal(mediator, "User1");
-        Usuario user2 = new UsuarioNormal(mediator, "User2");
-        Usuario user3 = new UsuarioNormal(mediator, "User3");
+        UsuarioNormal juan = new UsuarioNormal(sala, "juan");
+        UsuarioNormal yeison = new UsuarioNormal(sala, "yeison");
+        UsuarioNormal zulay = new UsuarioNormal(sala, "zulay");
 
+        sala.agregarUsuario(juan);
+        sala.agregarUsuario(yeison);
+        sala.agregarUsuario(zulay);
 
-        mediator.agregarUsuario(user1);
-        mediator.agregarUsuario(user2);
-        mediator.agregarUsuario(user3);
+        juan.enviarMensaje("hola soy pedro");
+        yeison.recibirMensaje("hola pedro soy yeison");
 
-        mediator.enviarMensaje("mensaje de prueva", user1);
-
-        user1.enviarMensaje("soy user1");
-        user2.enviarMensaje("yo user2");
-        user3.enviarMensaje("asi yo user3");
-
-        List<String> usuarios = new ArrayList<>();
-        usuarios.add("user4");
-        usuarios.add(("user5"));
-        usuarios.add("user6");
-        usuarios.add("user7");
-        usuarios.add("user8");
-
-        for (String user: usuarios) {
-            System.out.println("los usuarios son:" + " : "+ usuarios);
-        }
 
     }
 }
@@ -83,6 +69,14 @@ abstract class Usuario {
     public abstract void enviarMensaje(String mensaje);
 
     public abstract void recibirMensaje(String mensaje);
+
+    @Override
+    public String toString() {
+        return "Usuario{" +
+                "mediator=" + mediator +
+                ", nombre='" + nombre + '\'' +
+                '}';
+    }
 }
 
 class UsuarioNormal extends Usuario {
