@@ -1,5 +1,6 @@
 package org.example;
 
+import org.example.comprtamiento.Strategy;
 import org.example.creacion.Builder;
 import org.example.creacion.Factory;
 import org.example.creacion.Singleton;
@@ -20,6 +21,8 @@ public class Main {
         Factory.ejecutar();
         System.out.println("\n");
         Builder.ejecutar();
+        System.out.println("\n");
+        Strategy.ejecutar();
         System.out.println("\n");
     }
 }
