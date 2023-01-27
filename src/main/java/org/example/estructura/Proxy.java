@@ -2,11 +2,12 @@ package org.example.estructura;
 
 public class Proxy {
 
-    /**
-     * Es un intermediario que se pone al frente del recurso real
-     * para asi validar informacion, permisos o lo que sea de interes antes
-     * de permitit el acceso a la información
-     * */
+    public void ejecutar(){
+        ImagenProxy imagen = new ImagenProxy("/home/hola.jpg");
+        imagen.mostrar();
+    }
+
+
 }
 
 interface Imagen {

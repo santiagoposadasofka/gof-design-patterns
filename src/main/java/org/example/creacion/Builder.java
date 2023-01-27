@@ -7,20 +7,29 @@ public class Builder {
      * o con diferente cantidad de atributos de forma facil y legible.
      * */
 
+    public void ejecutar(){
 
-    Comida sanducheSencillo = new ComidaBuilder()
-            .carne("jamon")
-            .lechuga("crespa")
-            .queso("Mozarella").build();
+        Comida sanducheSencillo = new ComidaBuilder()
+                .carne("jamon")
+                .lechuga("crespa")
+                .queso("Mozarella").build();
 
-    Comida sanducheFull = new ComidaBuilder()
-            .carne("Res")
-            .tomate("en rodajas")
-            .lechuga("crespa")
-            .tomate("Mozarella")
-            .mostaza("Mucha")
-            .ketchup("poca")
-            .build();
+        Comida sanducheFull = new ComidaBuilder()
+                .carne("Res")
+                .tomate("en rodajas")
+                .lechuga("crespa")
+                .tomate("Rodaja")
+                .mostaza("Mucha")
+                .ketchup("poca")
+                .build();
+
+        Comida perroCaliente = new ComidaBuilder()
+                .carne("Salchicha").pan("Tipo perro").lechuga("poca").mayonesa("no").ketchup("Mucho").queso("Rayado")
+                .build();
+
+        System.out.println("Listo su perro caliente "+ perroCaliente.toString());
+    }
+
 }
 
 
