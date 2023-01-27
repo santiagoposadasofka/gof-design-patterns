@@ -1,6 +1,7 @@
 package org.example;
 
 import org.example.comprtamiento.Mediator;
+import org.example.comprtamiento.NotifyUpdate;
 import org.example.creacion.Builder;
 import org.example.creacion.Factory;
 import org.example.creacion.Singleton;
@@ -9,6 +10,7 @@ import org.example.estructura.Decorator;
 import org.example.estructura.Proxy;
 
 import java.lang.module.Configuration;
+import java.util.Observer;
 
 public class Main {
     public static void main(String[] args) {
@@ -48,6 +50,11 @@ public class Main {
 
         Mediator mediator = new Mediator();
         mediator.enviar();
+
+        System.out.println("--------------------------------------------------------------------------------------");
+
+        NotifyUpdate notifyUpdate = new NotifyUpdate();
+        notifyUpdate.notifyObserver();
 
     }
 }
