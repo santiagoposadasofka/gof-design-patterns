@@ -1,15 +1,15 @@
 package org.example.comprtamiento;
 
-
 import java.util.ArrayList;
 import java.util.List;
-
 
 /**
  * Permite notificar a todos los interesados sobre un cambio.
  * */
 interface Observer {
+
     void update(float temp, float humedad, float presion);
+
 }
 
 interface Subject {
@@ -17,7 +17,6 @@ interface Subject {
     void removeObserver(Observer o);
     void notifyObservers();
 }
-
 
 
 interface DisplayElement {
@@ -61,6 +60,22 @@ class Clima implements Subject {
     public void medidasChanged() {
         notifyObservers();
     }
+    public void ejecutar (){
+        Clima clima = new Clima();
+        CondicionesActuales condiciones = new CondicionesActuales(0,0,0);
+        clima.registerObserver(condiciones);
+        clima.setMedidas(28, 10, 25);
+        condiciones.display();
+        System.out.println(condiciones.toString());
+    }
+}
+
+public class ClimaEjecutar {
+    Clima clima = new Clima();
+    public void ejecutar (){
+        clima.ejecutar();
+    }
+
 }
 
 class CondicionesActuales implements Observer, DisplayElement {
@@ -94,4 +109,5 @@ class CondicionesActuales implements Observer, DisplayElement {
                 ", presion=" + presion +
                 '}';
     }
+
 }
