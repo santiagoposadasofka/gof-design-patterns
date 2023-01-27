@@ -7,22 +7,35 @@ package org.example.creacion;
 
 public class Builder {
     public void ejecutar() {
-        //...
+        // Se utilizan los elementos prediseñados para aplicar el patrón
+        Comida sanducheSencillo = new ComidaBuilder()
+                .pan("Tajado")
+                .carne("jamon")
+                .lechuga("crespa")
+                .queso("Mozarella")
+                .build();
+
+        Comida sanducheFull = new ComidaBuilder().pan("Tajado")
+                .carne("Res")
+                .tomate("en rodajas")
+                .lechuga("crespa")
+                .tomate("Mozarella")
+                .mostaza("Mucha")
+                .ketchup("poca")
+                .build();
+
+        Comida hamburguesaConMayonesa = new ComidaBuilder()
+                .pan("Redondo")
+                .carne("Res")
+                .tomate("Rodajas")
+                .lechuga("Crespa")
+                .queso("Americano")
+                .mayonesa("Mucha")
+                .build();
+        sanducheSencillo.setMostaza("Poca");
+        sanducheFull.setMayonesa("Normal");
+        hamburguesaConMayonesa.setCarne("Res y tocineta");
     }
-
-    Comida sanducheSencillo = new ComidaBuilder()
-            .carne("jamon")
-            .lechuga("crespa")
-            .queso("Mozarella").build();
-
-    Comida sanducheFull = new ComidaBuilder()
-            .carne("Res")
-            .tomate("en rodajas")
-            .lechuga("crespa")
-            .tomate("Mozarella")
-            .mostaza("Mucha")
-            .ketchup("poca")
-            .build();
 }
 
 class Comida {

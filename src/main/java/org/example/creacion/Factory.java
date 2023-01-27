@@ -7,7 +7,11 @@ package org.example.creacion;
 
 public class Factory {
     public void ejecutar() {
-        //...
+        // Se utilizan los elementos prediseñados para aplicar el patrón
+        FiguraGeometricaFactory fabrica = new FiguraGeometricaFactory();
+        fabrica.crearFiguraGeometrica("CUADRADO").dibujar();
+        fabrica.crearFiguraGeometrica("TRIANGULO").dibujar();
+        fabrica.crearFiguraGeometrica("CIRCULO").dibujar();
     }
 }
 

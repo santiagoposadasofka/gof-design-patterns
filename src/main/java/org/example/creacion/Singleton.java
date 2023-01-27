@@ -8,7 +8,15 @@ package org.example.creacion;
 
 public class Singleton {
     public void ejecutar() {
-        //...
+        // Se utilizan los elementos prediseñados para aplicar el patrón
+        Configuracion config1 = Configuracion.getInstancia();
+        System.out.println(config1.getValor1());
+        System.out.println(config1.getValor2());
+        config1.setValor1("Nuevo desde config 1");
+        config1.setValor2("Nuevo desde config 1");
+        Configuracion config2 = Configuracion.getInstancia();
+        System.out.println(config2.getValor1());
+        System.out.println(config2.getValor2());
     }
 }
 
