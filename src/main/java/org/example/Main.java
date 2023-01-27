@@ -1,5 +1,6 @@
 package org.example;
 
+import org.example.comprtamiento.Mediator;
 import org.example.creacion.Builder;
 import org.example.creacion.Factory;
 import org.example.creacion.Singleton;
@@ -28,6 +29,9 @@ public class Main {
 
         Proxy proxy = new Proxy();
         proxy.ejecutar();
+
+        Mediator mediator   = new Mediator();
+        mediator.ejecutar();
 
     }
 
