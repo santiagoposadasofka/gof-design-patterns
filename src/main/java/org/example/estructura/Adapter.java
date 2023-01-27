@@ -5,7 +5,15 @@ public class Adapter {
      * Permite cerrar brechas o transformar un elemento que
      * esta desarrollado o escrito en un leguaje ajeno para que pueda
      * ser interpretado por el recurso esperado
-     * */
+     */
+
+
+    public void ejecutar() {
+
+
+        System.out.println("mensaje");
+    }
+
 }
 
 
