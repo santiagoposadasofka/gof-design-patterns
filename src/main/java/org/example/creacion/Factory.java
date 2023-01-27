@@ -26,6 +26,10 @@ public class Factory {
 
         figura1.dibujar();
 
+        FiguraGeometricaFactory figuraGeometricaFactory = new FiguraGeometricaFactory();
+        figuraGeometricaFactory.crearFiguraGeometrica("CUADRADO");
+        System.out.println("la figura geometric creada es" + ":" + figuraGeometricaFactory);
+
     }
 }
 
