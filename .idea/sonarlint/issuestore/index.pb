@@ -1,8 +1,6 @@
 
 _
 /src/main/java/org/example/estructura/Proxy.java,2\6\265598577231d97ab6a30a1a403a66458de470f7
-a
-1src/main/java/org/example/estructura/Adapter.java,0\f\0fc3203696a6267cad820ca7a71a6313addb529c
 S
 #.idea/sonarlint/issuestore/index.pb,9\f\9fe84ebb15faf917b7def6236dba604453cc61e0
 e

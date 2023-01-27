@@ -6,6 +6,7 @@ import org.example.creacion.ComidaBuilder;
 import org.example.creacion.Factory;
 import org.example.creacion.Singleton;
 import org.example.estructura.decorator.Decorator;
+import org.example.estructura.patronAdapter.Adapter;
 
 public class Main {
     public static void main(String[] args) {
@@ -36,6 +37,14 @@ public class Main {
         Decorator decorator = new Decorator();
         decorator.ejecutarCafe();
         decorator.ejecutarLeche();
+
+        System.out.println();
+
+        Adapter adapter = new Adapter();
+        adapter.ejecutarMp3();
+        adapter.ejecutarWav();
+
+        System.out.println();
 
 
     }
