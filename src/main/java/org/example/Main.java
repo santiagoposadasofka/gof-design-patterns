@@ -1,6 +1,8 @@
 package org.example;
 
 import org.example.comprtamiento.Mediator;
+
+import org.example.comprtamiento.Observerprueba;
 import org.example.creacion.Builder;
 import org.example.creacion.Factory;
 import org.example.creacion.Singleton;
@@ -46,7 +48,9 @@ public class Main {
                     System.out.println("    Mediator");
                     Mediator mediator = new Mediator();
                     mediator.ejecutar();
-
+                    System.out.println("    Observer");
+                    Observerprueba observerprueba = new Observerprueba();
+                    observerprueba.ejecutar();
                     break;
                 default:
                     break;
