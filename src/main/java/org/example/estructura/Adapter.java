@@ -1,6 +1,18 @@
 package org.example.estructura;
 
 public class Adapter {
+
+    public void ejecutar() {
+
+        ReproductorWav reproductorWav = new ReproductorWav();
+        reproductorWav.reproducir("bachata.wav");
+        ReproductorMp3 reproductorMp3 = new ReproductorMp3();
+        reproductorMp3.reproducir("regueton.mp3");
+        AdaptadorDeAudio adaptadorDeAudio = new AdaptadorDeAudio();
+        adaptadorDeAudio.reproducir("salsa.wav");
+
+    }
+
     /**
      * Permite cerrar brechas o transformar un elemento que
      * esta desarrollado o escrito en un leguaje ajeno para que pueda
@@ -11,6 +23,7 @@ public class Adapter {
 
 interface ReproductorDeAudio {
     void reproducir(String archivo);
+
 }
 
 class ReproductorMp3 implements ReproductorDeAudio {
@@ -44,6 +57,8 @@ class AdaptadorDeAudio implements ReproductorDeAudio {
         if (archivo.endsWith(".wav")) {
             nuevoFormato = archivo.substring(0, archivo.lastIndexOf(".")) + ".mp3";
             reproductorMp3.reproducir(nuevoFormato);
+            System.out.println(nuevoFormato);
         }
     }
+
 }

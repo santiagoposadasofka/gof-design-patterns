@@ -2,6 +2,12 @@ package org.example.creacion;
 
 public class Singleton {
 
+
+    public void ejecutar(){
+        Configuracion configuracion= Configuracion.getInstancia();
+        Configuracion configuracion2= Configuracion.getInstancia();
+    }
+
     /**
      * Nos permite asegurar que solo haya una instancia de un objeto esperado,
      * ya sea por que queremos que solo haya un objeto de este tipo y que a partir de el,
@@ -23,6 +29,7 @@ class Configuracion {
         if (instancia == null) {
             instancia = new Configuracion();
         }
+        System.out.println("Soy la misma instancia");
         return instancia;
     }
 
