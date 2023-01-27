@@ -1,5 +1,6 @@
 package org.example;
 
+import org.example.comprtamiento.Ejecutar;
 import org.example.comprtamiento.Strategy;
 import org.example.creacion.Builder;
 import org.example.creacion.Factory;
@@ -7,6 +8,8 @@ import org.example.creacion.Singleton;
 import org.example.estructura.Adapter;
 import org.example.estructura.Decorator;
 import org.example.estructura.Proxy;
+
+import java.util.Observer;
 
 public class Main {
     public static void main(String[] args) {
@@ -23,6 +26,8 @@ public class Main {
         Builder.ejecutar();
         System.out.println("\n");
         Strategy.ejecutar();
+        System.out.println("\n");
+        Ejecutar.ejecutar();
         System.out.println("\n");
     }
 }
