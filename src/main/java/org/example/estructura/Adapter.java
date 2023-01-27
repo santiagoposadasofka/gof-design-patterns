@@ -6,6 +6,16 @@ public class Adapter {
      * esta desarrollado o escrito en un leguaje ajeno para que pueda
      * ser interpretado por el recurso esperado
      * */
+    public void Ejecutar(){
+
+
+        ReproductorMp3 reproductorMp3= new ReproductorMp3();
+        ReproductorWav reproductorWav =new ReproductorWav();
+        AdaptadorDeAudio adaptadorDeAudio= new AdaptadorDeAudio();
+        reproductorMp3.reproducir("laVacaLola.mp3");
+        reproductorWav.reproducir("LosPollitosDicen.wav");
+        adaptadorDeAudio.reproducir("hola.wav");
+    }
 }
 
 
