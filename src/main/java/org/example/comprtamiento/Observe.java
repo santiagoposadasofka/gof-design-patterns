@@ -4,13 +4,26 @@ package org.example.comprtamiento;
 import java.util.ArrayList;
 import java.util.List;
 
+public class Observe{
+    public void ejecutarObserver(){
+        CondicionesActuales condicionesActuales1=new CondicionesActuales(1,2,3);
+        CondicionesActuales condicionesActuales2=new CondicionesActuales(4,5,6);
+        Clima clima=new Clima();
+        clima.registerObserver(condicionesActuales1);
+        clima.registerObserver(condicionesActuales2);
+        condicionesActuales1.update(7,8,9);
+        System.out.println(condicionesActuales1.toString());
+    }
 
+}
 /**
  * Permite notificar a todos los interesados sobre un cambio.
  * */
 interface Observer {
     void update(float temp, float humedad, float presion);
 }
+
+
 
 interface Subject {
     void registerObserver(Observer o);
@@ -33,6 +46,7 @@ class Clima implements Subject {
     public Clima() {
         observadores = new ArrayList<>();
     }
+
 
     public void registerObserver(Observer o) {
         observadores.add(o);

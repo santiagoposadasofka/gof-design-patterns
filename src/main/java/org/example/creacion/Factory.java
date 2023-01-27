@@ -6,6 +6,12 @@ public class Factory {
      * Simplifica el proceso de construccion de objetos,
      * en este caso por medio de un parametro "tipo" construimos el objeto esperado.
      * */
+    public void ejecutarFactory(){
+
+        FiguraGeometricaFactory figuraGeometricaFactory=new FiguraGeometricaFactory();
+        figuraGeometricaFactory.crearFiguraGeometrica("CUADRADO").dibujar();
+        figuraGeometricaFactory.crearFiguraGeometrica("CUBO").dibujar();
+    }
 }
 
 
@@ -35,6 +41,13 @@ class Circulo implements FiguraGeometrica {
     }
 }
 
+class Cubo implements FiguraGeometrica{
+    @Override
+    public void dibujar() {
+        System.out.println("Dibujando un cubo");
+    }
+}
+
 class FiguraGeometricaFactory {
     public FiguraGeometrica crearFiguraGeometrica(String tipo) {
         if (tipo == null) {
@@ -46,6 +59,8 @@ class FiguraGeometricaFactory {
             return new Triangulo();
         } else if (tipo.equalsIgnoreCase("CIRCULO")) {
             return new Circulo();
+        } else if (tipo.equalsIgnoreCase("CUBO")){
+            return new Cubo();
         }else{
             return null;
         }
