@@ -8,6 +8,10 @@ public class Singleton {
      * todos quien lo requieran tengan que tomar la informacion a partir de este,
      * evitando que hayan diferencias entre los interesados a la hora de tomar informacion
      * */
+    public void ejecutar (){
+        Configuracion.getInstancia().setValor1("Nuevo valor modificado");
+        System.out.println("Valor 1 cambió, ahora es "+ Configuracion.getInstancia().getValor1());
+    }
 }
 
 

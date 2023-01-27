@@ -5,9 +5,16 @@ import java.util.List;
 
 public class Mediator {
 
-    /**
-     * Permite interactuar con diferentes objetos por medio de un intermediario.
-     * */
+
+    public void ejecutar(){
+
+
+        ChatRoom chatMediator = new ChatRoom();
+        UsuarioNormal usuario1 = new UsuarioNormal(chatMediator, "Luis");
+        UsuarioNormal usuario2 = new UsuarioNormal(chatMediator, "Fernando");
+        usuario2.enviarMensaje("Hola amigo");
+        usuario1.recibirMensaje("Mensaje recibido");
+ }
 }
 
 

@@ -1,11 +1,26 @@
 package org.example.estructura;
 
+import java.util.ArrayList;
+
 public class Adapter {
     /**
      * Permite cerrar brechas o transformar un elemento que
      * esta desarrollado o escrito en un leguaje ajeno para que pueda
      * ser interpretado por el recurso esperado
      * */
+    public void ejecutar(){
+        ReproductorWav archivo = new ReproductorWav();
+        archivo.reproducir("archivo.wav");
+        ReproductorMp3 archivo1 = new ReproductorMp3();
+        archivo1.reproducir("archivo.mp3");
+
+
+    }
+
+
+
+
+
 }
 
 
@@ -47,3 +62,4 @@ class AdaptadorDeAudio implements ReproductorDeAudio {
         }
     }
 }
+

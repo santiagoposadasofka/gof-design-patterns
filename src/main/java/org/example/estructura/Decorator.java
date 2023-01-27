@@ -2,9 +2,18 @@ package org.example.estructura;
 
 public class Decorator {
 
-    /**
-     * Permite a partir de una base añadir funciones o informacion adicional
-     * */
+    public void ejecutar (){
+        Cafe nescafe = new Cafe();
+        System.out.println("Cafe cuesta "+ nescafe.costo());
+        System.out.println("Este cafe es "+ nescafe.getDescripcion());
+
+        Leche coolechera = new Leche(nescafe);
+        System.out.println("Leche cuesta "+ coolechera.costo());
+        System.out.println("La leche es "+ coolechera.getDescripcion());
+
+
+    }
+
 }
 
 
@@ -40,7 +49,7 @@ class Leche extends Adicional {
     }
 
     public String getDescripcion() {
-        return bebida.getDescripcion() + ", Leche";
+        return bebida.getDescripcion() + ", con Leche";
     }
 
     public double costo() {
