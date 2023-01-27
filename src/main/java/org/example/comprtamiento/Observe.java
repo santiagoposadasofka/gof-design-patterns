@@ -4,13 +4,15 @@ package org.example.comprtamiento;
 import java.util.ArrayList;
 import java.util.List;
 
-class Observe{
+public class Observe{
     public void ejecutarObserver(){
         CondicionesActuales condicionesActuales1=new CondicionesActuales(1,2,3);
         CondicionesActuales condicionesActuales2=new CondicionesActuales(4,5,6);
         Clima clima=new Clima();
         clima.registerObserver(condicionesActuales1);
         clima.registerObserver(condicionesActuales2);
+        condicionesActuales1.update(7,8,9);
+        System.out.println(condicionesActuales1.toString());
     }
 
 }

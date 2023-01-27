@@ -14,7 +14,7 @@ public class Strategy {
         List<File> filesList=new ArrayList<>();
         CompressionStrategy zip=new ZipCompressionStrategy();
         CompressionContext compressionContext=new CompressionContext();
-        compressionContext.createArchive(filesList);
+        //compressionContext.createArchive(filesList);
 
 
     }

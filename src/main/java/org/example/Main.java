@@ -1,6 +1,8 @@
 package org.example;
 
 import org.example.comprtamiento.Mediator;
+import org.example.comprtamiento.Observe;
+import org.example.comprtamiento.Strategy;
 import org.example.creacion.Builder;
 import org.example.creacion.Factory;
 import org.example.creacion.Singleton;
@@ -34,6 +36,10 @@ public class Main {
         Mediator mediator=new Mediator();
         mediator.ejecutarMediator();
 
+        Observe observe=new Observe();
+        observe.ejecutarObserver();
 
+        Strategy strategy=new Strategy();
+        strategy.ejecuatrStrategy();
     }
 }
