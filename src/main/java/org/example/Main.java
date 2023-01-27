@@ -1,5 +1,6 @@
 package org.example;
 
+import org.example.comprtamiento.Mediator;
 import org.example.creacion.Builder;
 import org.example.creacion.Factory;
 import org.example.creacion.Singleton;
@@ -32,9 +33,10 @@ public class Main {
         //decorator.ejecutarDecorator();
 
         Proxy proxy = new Proxy();
-        proxy.ejecutarProxy();
+        //proxy.ejecutarProxy();
 
-
-        //System.out.println("Patrones de comportamiento");
+        System.out.println("Patrones de comportamiento");
+        Mediator mediator = new Mediator();
+        mediator.ejecutarMediator();
     }
 }
