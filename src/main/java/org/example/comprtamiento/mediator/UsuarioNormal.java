@@ -16,6 +16,6 @@ public class UsuarioNormal extends Usuario {
 
     @Override
     public void recibirMensaje(String mensaje) {
-        System.out.println(mensaje);
+        System.out.println(nombre + " Esta recibien el mensaje: " + mensaje );
     }
 }

@@ -59,9 +59,7 @@ public class Main {
 
         System.out.println();
         System.out.println("Patron de diseño Mediator");
-        Mediator mediator = new Mediator();
-        mediator.ejecutarUsuarioNormal();
-        mediator.ejecutarChatRoom();
+       Mediator.ejecutar();
 
         System.out.println();
         System.out.println("Patron de diseño Observer");

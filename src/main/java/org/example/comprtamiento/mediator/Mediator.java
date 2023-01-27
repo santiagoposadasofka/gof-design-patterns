@@ -10,26 +10,23 @@ import java.util.List;
 
 public class Mediator {
 
-    private ChatMediator mediador;
-    private UsuarioNormal usuario ;
 
     /**
      * Permite interactuar con diferentes objetos por medio de un intermediario.
      * */
 
-    public void ejecutarUsuarioNormal() {
-        UsuarioNormal usuarioNormal = new UsuarioNormal(mediador , "Antonio");
-        usuarioNormal.recibirMensaje("Se ha guardado  la informacion correctamente");
-
-        //mp3.reproducir(".mp3");
-    }
-    public void ejecutarChatRoom() {
-        ChatRoom usuarioChatRoom = new ChatRoom();
-        usuarioChatRoom.enviarMensaje("Se ha enviado la informacion correctamente",usuario);
-
-        //mp3.reproducir(".mp3");
+    public static void ejecutar(){
+        ChatRoom sala = new ChatRoom();
+        UsuarioNormal pedro = new UsuarioNormal(sala, "Pedro");
+        UsuarioNormal camila = new UsuarioNormal(sala, "Camila");
+        UsuarioNormal manuel = new UsuarioNormal(sala, "Manuel");
+        sala.agregarUsuario(pedro);
+        sala.agregarUsuario(camila);
+        sala.agregarUsuario(manuel);
+        pedro.enviarMensaje("Hola");
 
     }
+
 
 }
 
