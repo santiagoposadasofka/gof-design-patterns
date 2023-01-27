@@ -2,6 +2,7 @@ package org.example;
 
 import org.example.comprtamiento.Mediator;
 import org.example.comprtamiento.NotifyUpdate;
+import org.example.comprtamiento.Strategy;
 import org.example.creacion.Builder;
 import org.example.creacion.Factory;
 import org.example.creacion.Singleton;
@@ -55,6 +56,11 @@ public class Main {
 
         NotifyUpdate notifyUpdate = new NotifyUpdate();
         notifyUpdate.notifyObserver();
+
+        System.out.println("---------------------------------------------------------------------------------");
+
+        Strategy strategy = new Strategy();
+        strategy.comprimir();
 
     }
 }

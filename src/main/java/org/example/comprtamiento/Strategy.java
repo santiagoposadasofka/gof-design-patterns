@@ -8,22 +8,31 @@ public class Strategy {
     /**
      * Permite definir un proposito pero dependiendo del contexto implementarlo.
      * */
+
+    public void comprimir(){
+        CompressionStrategy compressionStrategy = new RarCompressionStrategy();
+        CompressionContext compressionContext = new CompressionContext();
+        compressionContext.setCompressionStrategy(compressionStrategy);
+        compressionStrategy.compressFiles("Las mil y una noches.pdf");
+    }
 }
 
 
 interface CompressionStrategy {
-    void compressFiles(List<File> files);
+    void compressFiles(String file);
 }
 
 class ZipCompressionStrategy implements CompressionStrategy {
-    public void compressFiles(List<File> files) {
+    public void compressFiles(String file) {
         // implementación del algoritmo de compresión ZIP
+        System.out.println("Comprimiendo archivo en formato ZIP");
     }
 }
 
 class RarCompressionStrategy implements CompressionStrategy {
-    public void compressFiles(List<File> files) {
+    public void compressFiles(String file) {
         // implementación del algoritmo de compresión RAR
+        System.out.println("Compribiendo archivo en formato RAR");
     }
 }
 
@@ -34,7 +43,7 @@ class CompressionContext {
         this.strategy = strategy;
     }
 
-    public void createArchive(List<File> files) {
-        strategy.compressFiles(files);
+    public void createArchive(String file) {
+        strategy.compressFiles(file);
     }
 }
