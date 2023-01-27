@@ -1,5 +1,6 @@
 package org.example;
 
+import org.example.comprtamiento.Mediator;
 import org.example.creacion.Builder;
 import org.example.creacion.Factory;
 import org.example.creacion.Singleton;
@@ -42,6 +43,11 @@ public class Main {
 
         Proxy proxy = new Proxy();
         proxy.mostrarImagen();
+
+        System.out.println("------------------------------------------------------------------------------------");
+
+        Mediator mediator = new Mediator();
+        mediator.enviar();
 
     }
 }
