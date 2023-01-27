@@ -4,6 +4,9 @@ import java.util.Scanner;
 import org.example.comprtamiento.EjecuteObserver;
 import org.example.comprtamiento.Strategy;
 import org.example.comprtamiento.Mediator;
+import org.example.creacion.Factory;
+import org.example.creacion.Singleton;
+import org.example.creacion.Builder;
 
 
 
@@ -35,6 +38,27 @@ public class Main {
                     Strategy strategy= new Strategy();
                     strategy.ejecutar();
                     break;
+
+                case 4:
+                    System.out.println("    Patron FACTORY  ");
+                    Factory factory = new Factory();
+                    factory.ejecutar();
+                    break;
+
+                case 5:
+                    System.out.println("    Patron SINGLETON  ");
+                    Singleton singleton = new Singleton();
+                    singleton.ejecutar();
+                    break;
+                case 6:
+                    System.out.println("    Patron BUILDER  ");
+                    Builder builder = new Builder();
+                    builder.ejecutar();
+                    break;
+
+
+
+
 
 
             }
