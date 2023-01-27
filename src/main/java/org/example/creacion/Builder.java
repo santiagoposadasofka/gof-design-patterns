@@ -14,6 +14,8 @@ public class Builder {
                 .lechuga("crespa")
                 .queso("Mozarella").build();
 
+        System.out.println("la comida es" + sanducheSencillo.toString());
+
         Comida sanducheFull = new ComidaBuilder()
                 .carne("Res")
                 .tomate("en rodajas")
@@ -22,6 +24,8 @@ public class Builder {
                 .mostaza("Mucha")
                 .ketchup("poca")
                 .build();
+
+        System.out.println("la comida es " + sanducheFull);
     }
 }
 

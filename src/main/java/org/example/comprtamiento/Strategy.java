@@ -1,13 +1,32 @@
 package org.example.comprtamiento;
 
 import java.io.File;
+import java.util.ArrayList;
 import java.util.List;
 
 public class Strategy {
 
     /**
      * Permite definir un proposito pero dependiendo del contexto implementarlo. falta
-     * */
+     */
+
+
+    public void ejecutar() {
+
+
+        CompressionContext context = new CompressionContext();
+        context.setCompressionStrategy(new ZipCompressionStrategy());
+
+        List<File> files = new ArrayList<>();
+        files.add(new File("ejemplo1.pdf"));
+        files.add(new File("ejemplo2.jpg"));
+        files.add(new File("ejemplo1.png"));
+
+        //agregar archivos a la lista
+
+        context.createArchive(files);
+        System.out.println(files);
+    }
 }
 
 

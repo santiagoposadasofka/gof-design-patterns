@@ -1,6 +1,8 @@
 package org.example;
 
+
 import org.example.comprtamiento.Mediator;
+import org.example.comprtamiento.Strategy;
 import org.example.creacion.Builder;
 import org.example.creacion.Factory;
 import org.example.estructura.Adapter;
@@ -40,6 +42,9 @@ public class Main {
         Mediator mediator = new Mediator();
         mediator.ejecutar();
 
+
+        Strategy strategy = new Strategy();
+        strategy.ejecutar();
     }
 
 

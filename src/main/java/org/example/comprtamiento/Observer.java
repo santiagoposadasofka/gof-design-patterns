@@ -7,17 +7,18 @@ import java.util.List;
 
 /**
  * Permite notificar a todos los interesados sobre un cambio.
- * */
+ */
 interface Observer {
     void update(float temp, float humedad, float presion);
 }
 
 interface Subject {
     void registerObserver(Observer o);
+
     void removeObserver(Observer o);
+
     void notifyObservers();
 }
-
 
 
 interface DisplayElement {
@@ -32,6 +33,7 @@ class Clima implements Subject {
 
     public Clima() {
         observadores = new ArrayList<>();
+
     }
 
     public void registerObserver(Observer o) {
@@ -94,4 +96,6 @@ class CondicionesActuales implements Observer, DisplayElement {
                 ", presion=" + presion +
                 '}';
     }
+
+
 }

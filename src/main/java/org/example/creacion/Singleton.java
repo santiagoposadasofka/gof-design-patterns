@@ -7,7 +7,16 @@ public class Singleton {
      * ya sea por que queremos que solo haya un objeto de este tipo y que a partir de el,
      * todos quien lo requieran tengan que tomar la informacion a partir de este,
      * evitando que hayan diferencias entre los interesados a la hora de tomar informacion
-     * */
+     */
+
+    public void ejecutar() {
+
+
+
+
+    }
+
+
 }
 
 
