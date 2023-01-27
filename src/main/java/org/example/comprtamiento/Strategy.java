@@ -4,10 +4,10 @@ import java.io.File;
 import java.util.List;
 
 public class Strategy {
-
     /**
-     * Permite definir un proposito pero dependiendo del contexto implementarlo.
+     * Permite definir un propósito pero dependiendo del contexto implementarlo.
      * */
+
 }
 
 

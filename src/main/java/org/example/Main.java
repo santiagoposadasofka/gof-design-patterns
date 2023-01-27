@@ -1,5 +1,6 @@
 package org.example;
 
+import org.example.creacion.Builder;
 import org.example.creacion.Factory;
 import org.example.creacion.Singleton;
 import org.example.estructura.Adapter;
@@ -17,6 +18,8 @@ public class Main {
         Singleton.ejecutar();
         System.out.println("\n");
         Factory.ejecutar();
+        System.out.println("\n");
+        Builder.ejecutar();
         System.out.println("\n");
     }
 }
