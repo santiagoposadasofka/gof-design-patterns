@@ -9,16 +9,16 @@ public class Factory {
 
     public void Ejecutar(){
 
-    FiguraGeometricaFactory figuraGeometricaFactory=new FiguraGeometricaFactory();
-    //figuraGeometricaFactory.crearFiguraGeometrica("circulo"); //ES NECESARIO QUE HAGA ESTO????
-    //figuraGeometricaFactory.crearFiguraGeometrica("cuadrado");
-    //figuraGeometricaFactory.crearFiguraGeometrica("triangulo");
-    Circulo circulo = new Circulo();
-    Cuadrado cuadrado = new Cuadrado();
-    Triangulo triangulo = new Triangulo();
-    circulo.dibujar();
-    cuadrado.dibujar();
-    triangulo.dibujar();
+        FiguraGeometricaFactory factory = new FiguraGeometricaFactory();
+        FiguraGeometrica triangulo = factory.crearFiguraGeometrica("triangulo");
+        FiguraGeometrica circulo = factory.crearFiguraGeometrica("circulo");
+        FiguraGeometrica cuadrado = factory.crearFiguraGeometrica("cuadrado");
+
+
+        cuadrado.dibujar();
+        triangulo.dibujar();
+        circulo.dibujar();
+
 
 
     }
