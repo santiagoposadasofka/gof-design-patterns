@@ -5,6 +5,18 @@ import java.util.List;
 
 public class Mediator {
 
+    public void ejecutar (){
+        ChatMediator mediator = new ChatRoom();
+        UsuarioNormal usuario1 = new UsuarioNormal(mediator, "Usuario 1");
+        UsuarioNormal usuario2 = new UsuarioNormal(mediator, "Usuario 2");
+        UsuarioNormal usuario3 = new UsuarioNormal(mediator, "Usuario 3");
+
+        mediator.agregarUsuario(usuario1);
+        mediator.agregarUsuario(usuario2);
+        mediator.agregarUsuario(usuario3);
+
+        usuario1.enviarMensaje("Hola a todo el training de Automatización/QA!");
+    }
     /**
      * Permite interactuar con diferentes objetos por medio de un intermediario.
      * */
