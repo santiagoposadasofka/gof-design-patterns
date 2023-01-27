@@ -1,13 +1,28 @@
 package org.example.comprtamiento;
 
 import java.io.File;
-import java.util.List;
+import java.util.ArrayList;
+import java.util.*;
 
 public class Strategy {
 
     /**
      * Permite definir un proposito pero dependiendo del contexto implementarlo.
      * */
+
+    public void ejecutar(){
+        List <File> zip = new ArrayList<File>();
+        ZipCompressionStrategy zipCompressionStrategy = new ZipCompressionStrategy();
+        zipCompressionStrategy.compressFiles(zip);
+
+        RarCompressionStrategy rarCompressionStrategy = new RarCompressionStrategy();
+        rarCompressionStrategy.compressFiles(zip);
+
+        CompressionContext ctx = new CompressionContext();
+        ctx.setCompressionStrategy(rarCompressionStrategy);
+        ctx.setCompressionStrategy(zipCompressionStrategy);
+
+    }
 }
 
 
@@ -37,4 +52,6 @@ class CompressionContext {
     public void createArchive(List<File> files) {
         strategy.compressFiles(files);
     }
-}
+
+    }
+

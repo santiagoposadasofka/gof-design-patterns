@@ -8,19 +8,31 @@ public class Builder {
      * */
 
 
-    Comida sanducheSencillo = new ComidaBuilder()
-            .carne("jamon")
-            .lechuga("crespa")
-            .queso("Mozarella").build();
 
-    Comida sanducheFull = new ComidaBuilder()
-            .carne("Res")
-            .tomate("en rodajas")
-            .lechuga("crespa")
-            .tomate("Mozarella")
-            .mostaza("Mucha")
-            .ketchup("poca")
-            .build();
+
+    public void ejecutar(){
+        Comida sanducheSencillo = new ComidaBuilder()
+                .carne("jamon")
+                .lechuga("crespa")
+                .queso("Mozarella").build();
+
+        Comida sanducheFull = new ComidaBuilder()
+                .carne("Res")
+                .tomate("en rodajas")
+                .lechuga("crespa")
+                .tomate("Mozarella")
+                .mostaza("Mucha")
+                .ketchup("poca")
+                .build();
+
+        Comida sanucheCarne = new ComidaBuilder()
+                .carne("jamos")
+                .carne("res")
+                .carne("cerdo")
+                .carne("pechuga")
+                .build();
+
+    }
 }
 
 

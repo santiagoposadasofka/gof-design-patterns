@@ -7,6 +7,15 @@ public class Proxy {
      * para asi validar informacion, permisos o lo que sea de interes antes
      * de permitit el acceso a la información
      * */
+
+    public void ejecutar(){
+
+        ImagenReal imagenReal = new ImagenReal("c/Usuarios/rolin/imagenes");
+        imagenReal.mostrar();
+
+        ImagenProxy imagenProxy = new ImagenProxy("c/Usuarios/rolin/imagenes/deportes");
+        imagenProxy.mostrar();
+    }
 }
 
 interface Imagen {
@@ -43,6 +52,7 @@ class ImagenProxy implements Imagen {
             imagenReal = new ImagenReal(rutaArchivo);
         }
         imagenReal.mostrar();
+
     }
 }
 

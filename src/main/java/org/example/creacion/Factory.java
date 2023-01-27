@@ -6,6 +6,13 @@ public class Factory {
      * Simplifica el proceso de construccion de objetos,
      * en este caso por medio de un parametro "tipo" construimos el objeto esperado.
      * */
+
+    public void ejecutar(){
+        FiguraGeometricaFactory figuraGeometricaFactory = new FiguraGeometricaFactory();
+        figuraGeometricaFactory.crearFiguraGeometrica("CUADRADO");
+        figuraGeometricaFactory.crearFiguraGeometrica("TRIANGULO");
+        figuraGeometricaFactory.crearFiguraGeometrica("CIRCULO");
+    }
 }
 
 
@@ -49,5 +56,7 @@ class FiguraGeometricaFactory {
         }else{
             return null;
         }
+
     }
+
 }
