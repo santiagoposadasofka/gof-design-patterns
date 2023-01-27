@@ -1,5 +1,6 @@
 package org.example;
 
+import org.example.comprtamiento.Mediator;
 import org.example.creacion.Builder;
 import org.example.creacion.Factory;
 import org.example.creacion.Singleton;
@@ -9,7 +10,7 @@ import org.example.estructura.Proxy;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("-----------Patrones de Diseño de Creacion ----------------");
+        System.out.println("-------Patrones de Diseño de Creacion -----------");
 
         System.out.println("-----------Builder----------------");
         Builder builder = new Builder();
@@ -23,7 +24,7 @@ public class Main {
         Singleton singleton = new Singleton();
         singleton.ejecutar();
 
-        System.out.println("-----------Patrones de Diseño de Estructura ----------------");
+        System.out.println("-------Patrones de Diseño de Estructura -----------");
 
         System.out.println("-----------Adapter---------------");
         Adapter adapter = new Adapter();
@@ -36,5 +37,11 @@ public class Main {
         System.out.println("-----------Proxy---------------");
         Proxy proxy = new Proxy();
         proxy.ejecutar();
+
+        System.out.println("-------Patrones de Diseño de Comportamiento -----------");
+
+        System.out.println("-----------Mediator---------------");
+        Mediator mediator = new Mediator();
+        mediator.ejecutar();
     }
 }
