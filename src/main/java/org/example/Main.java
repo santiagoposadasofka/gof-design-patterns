@@ -21,6 +21,7 @@ public class Main {
                     singleton.ejecutar();
                     System.out.println("     Factory");
                     Factory factory = new Factory();
+                    factory.ejecutar();
 
                     break;
                 case 2:

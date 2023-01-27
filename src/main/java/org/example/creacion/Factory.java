@@ -8,12 +8,17 @@ public class Factory {
      * Simplifica el proceso de construccion de objetos,
      * en este caso por medio de un parametro "tipo" construimos el objeto esperado.
      * */
-
-    List<FiguraGeometrica> figuras = new ArrayList<>();
-
-    public List<FiguraGeometrica> getFiguras() {
-        return figuras;
+    public void ejecutar(){
+        FiguraGeometricaFactory figuraGeometricaFactory = new FiguraGeometricaFactory();
+        FiguraGeometrica figuraGeometrica= figuraGeometricaFactory.crearFiguraGeometrica("Circulo");
+        FiguraGeometrica figuraGeometrica2= figuraGeometricaFactory.crearFiguraGeometrica("Cuadrado");
+        FiguraGeometrica figuraGeometrica3= figuraGeometricaFactory.crearFiguraGeometrica("Triangulo");
+        figuraGeometrica.dibujar();
+        figuraGeometrica2.dibujar();
+        figuraGeometrica3.dibujar();
     }
+
+
 
 }
 
