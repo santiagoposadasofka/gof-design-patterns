@@ -4,7 +4,24 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Mediator {
+    public void ejecutar(){
+        ChatRoom mediador = new ChatRoom();
 
+        UsuarioNormal usuario1 = new UsuarioNormal(new ChatRoom(), "Carlos");
+        UsuarioNormal usuario2 = new UsuarioNormal(new ChatRoom(), "Roberto");
+
+        mediador.agregarUsuario(usuario1);
+        System.out.println("Se agregó usuario 1");
+
+        mediador.agregarUsuario(usuario2);
+        System.out.println("Se agregó usuario 2");
+
+        mediador.enviarMensaje("Hola", usuario1);
+        mediador.enviarMensaje("Hola, como estàs", usuario2);
+
+
+
+    }
     /**
      * Permite interactuar con diferentes objetos por medio de un intermediario.
      * */
