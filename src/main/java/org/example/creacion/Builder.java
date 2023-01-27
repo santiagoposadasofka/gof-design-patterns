@@ -6,21 +6,16 @@ public class Builder {
      * Nos permite construir un objeto con diferentes niveles de especificidad,
      * o con diferente cantidad de atributos de forma facil y legible.
      * */
+    public void ejecutar(){
+        Comida sandiwch = new ComidaBuilder()
+                .pan("Blanco")
+                .lechuga("crespa")
+                .queso("Doble crema")
+                .mayonesa("poca")
+                .build();
+        System.out.println(sandiwch.toString());
+    }
 
-
-    Comida sanducheSencillo = new ComidaBuilder()
-            .carne("jamon")
-            .lechuga("crespa")
-            .queso("Mozarella").build();
-
-    Comida sanducheFull = new ComidaBuilder()
-            .carne("Res")
-            .tomate("en rodajas")
-            .lechuga("crespa")
-            .tomate("Mozarella")
-            .mostaza("Mucha")
-            .ketchup("poca")
-            .build();
 }
 
 
@@ -71,24 +66,21 @@ class ComidaBuilder {
     private Comida comida;
 
     public ComidaBuilder() {
+
         comida = new Comida();
     }
-
     public ComidaBuilder pan(String pan) {
         comida.setPan(pan);
         return this;
     }
-
     public ComidaBuilder carne(String carne) {
         comida.setCarne(carne);
         return this;
     }
-
     public ComidaBuilder lechuga(String lechuga) {
         comida.setLechuga(lechuga);
         return this;
     }
-
     public ComidaBuilder tomate(String tomate) {
         comida.setTomate(tomate);
         return this;
@@ -115,6 +107,7 @@ class ComidaBuilder {
     }
 
     public Comida build(){
+
         return this.comida;
     }
 }
