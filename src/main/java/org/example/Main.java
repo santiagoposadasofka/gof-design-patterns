@@ -1,5 +1,6 @@
 package org.example;
 
+import org.example.comprtamiento.Mediator;
 import org.example.comprtamiento.Strategy;
 import org.example.creacion.Builder;
 import org.example.creacion.ComidaBuilder;
@@ -51,6 +52,10 @@ public class Main {
         proxy.ejecutarImagenReal();
 
         System.out.println();
+        System.out.println("Patron de diseño Mediator");
+        Mediator mediator = new Mediator();
+        mediator.ejecutarUsuarioNormal();
+        mediator.ejecutarChatRoom();
 
     }
 }

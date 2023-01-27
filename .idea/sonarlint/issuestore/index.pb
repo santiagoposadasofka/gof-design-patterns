@@ -5,8 +5,6 @@ e
 5src/main/java/org/example/creacion/ComidaBuilder.java,5\e\5e94ba3ab3b9efc4060b04090260c422e931f49e
 ^
 .src/main/java/org/example/creacion/Comida.java,7\3\73b595d7ed8fbbce90893b5d4c4511144836f681
-e
-5src/main/java/org/example/comprtamiento/Mediator.java,3\d\3df8feeeab789917ab0b37e3b938b2126f95cea8
 a
 1src/main/java/org/example/creacion/Singleton.java,e\f\efe1bcccd74cf4b99f0f20fb4299544e91c21be3
 _
