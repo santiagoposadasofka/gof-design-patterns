@@ -5,6 +5,7 @@ import org.example.creacion.Builder;
 import org.example.creacion.ComidaBuilder;
 import org.example.creacion.Factory;
 import org.example.creacion.Singleton;
+import org.example.estructura.decorator.Decorator;
 
 public class Main {
     public static void main(String[] args) {
@@ -31,6 +32,10 @@ public class Main {
         strategy.ejecutarZip();
 
         System.out.println();
+
+        Decorator decorator = new Decorator();
+        decorator.ejecutarCafe();
+        decorator.ejecutarLeche();
 
 
     }
