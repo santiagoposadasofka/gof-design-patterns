@@ -6,13 +6,36 @@ public class Factory {
      * Simplifica el proceso de construccion de objetos,
      * en este caso por medio de un parametro "tipo" construimos el objeto esperado.
      * */
+
+    /**
+     * Método para la ejecución del patron
+     */
+    public void ejecutarFiguraGeometricaFactory() {
+        FiguraGeometricaFactory figuraGeometricaFactory = new FiguraGeometricaFactory();
+
+        FiguraGeometrica cuadradrado = figuraGeometricaFactory.crearFiguraGeometrica("Cuadrado");
+        cuadradrado.dibujar();
+
+        FiguraGeometrica triangulo = figuraGeometricaFactory.crearFiguraGeometrica("Triangulo");
+        triangulo.dibujar();
+
+        FiguraGeometrica circulo = figuraGeometricaFactory.crearFiguraGeometrica("Circulo");
+        circulo.dibujar();
+    }
+
 }
 
 
-
+/**
+ * Interfaz de FiguraGeométrica
+ */
 interface FiguraGeometrica {
     void dibujar();
 }
+
+/**
+ * Clases concretas que implementan la interfaz FiguraGeométrica
+ */
 
 class Cuadrado implements FiguraGeometrica {
     @Override
@@ -35,6 +58,9 @@ class Circulo implements FiguraGeometrica {
     }
 }
 
+/**
+ * Clase de fábrica que crea objetos de figurasGeométricas
+ */
 class FiguraGeometricaFactory {
     public FiguraGeometrica crearFiguraGeometrica(String tipo) {
         if (tipo == null) {

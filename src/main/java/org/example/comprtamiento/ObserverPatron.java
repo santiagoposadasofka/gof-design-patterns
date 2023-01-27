@@ -8,6 +8,17 @@ import java.util.List;
 /**
  * Permite notificar a todos los interesados sobre un cambio.
  * */
+
+public class ObserverPatron {
+    public void ejecutarObserver (){
+        Clima clima = new Clima();
+        CondicionesActuales condicionesActuales = new CondicionesActuales(0f,0f,0f);
+        clima.registerObserver(condicionesActuales);
+        clima.setMedidas(28, 60, 1020);
+        System.out.println(condicionesActuales);
+    }
+}
+
 interface Observer {
     void update(float temp, float humedad, float presion);
 }
