@@ -5,6 +5,23 @@ public class Decorator {
     /**
      * Permite a partir de una base añadir funciones o informacion adicional
      * */
+
+    public void ejecutar(){
+
+        Cafe cafe = new Cafe();
+        Chocolate chocolate = new Chocolate();
+        Leche leche = new Leche(cafe);
+        Leche leche1 = new Leche(chocolate);
+
+        System.out.println("Esta es su bebida: " + cafe.getDescripcion() +"\n Tiene un costo de: "+ cafe.costo()
+                            + "\n Si desea Leche tiene un costo de: " + leche.costo());
+
+        System.out.println("----------------------------------------");
+
+        System.out.println("Esta es su bebida: " + chocolate.getDescripcion() +"\n Tiene un costo de: "+ chocolate.costo()
+                + "\n Si desea Leche tiene un costo de: " + leche1.costo());
+
+    }
 }
 
 
@@ -25,6 +42,16 @@ class Cafe extends Bebida {
 
     public double costo() {
         return 1.99;
+    }
+}
+
+class Chocolate extends Bebida {
+    public Chocolate() {
+        descripcion = "Chocolate";
+    }
+
+    public double costo() {
+        return 2.0;
     }
 }
 
