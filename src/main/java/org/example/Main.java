@@ -9,6 +9,7 @@ import org.example.estructura.Decorator;
 import org.example.estructura.Proxy;
 
 
+
 public class Main {
     public static void main(String[] args) {
 
@@ -32,6 +33,13 @@ public class Main {
 
         Mediator mediator   = new Mediator();
         mediator.ejecutar();
+
+
+
+
+
+
+
 
     }
 

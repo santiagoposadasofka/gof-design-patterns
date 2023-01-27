@@ -14,14 +14,11 @@ public class Mediator {
     public  void ejecutar(){
         ChatRoom chatRoom = new ChatRoom();
        UsuarioNormal user = new UsuarioNormal(chatRoom, "Carlos");
-       user.enviarMensaje("Hola a todos");
        UsuarioNormal user2 = new UsuarioNormal(chatRoom, "Luna");
+       chatRoom.agregarUsuario(user);
+       chatRoom.agregarUsuario(user2);
+       user.enviarMensaje("Hola a todos");
        user.recibirMensaje("Hola a todos");
-
-
-
-
-
 
 
     }
@@ -82,6 +79,6 @@ class UsuarioNormal extends Usuario {
 
     @Override
     public void recibirMensaje(String mensaje){
-        System.out.println(mensaje);
+        System.out.println(mensaje + nombre + " Esta recibiendo  mensaje = " + mensaje);
     }
 }
