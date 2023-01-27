@@ -3,6 +3,7 @@ package org.example;
 import org.example.comprtamiento.Mediator;
 
 import org.example.comprtamiento.Observerprueba;
+import org.example.comprtamiento.Strategy;
 import org.example.creacion.Builder;
 import org.example.creacion.Factory;
 import org.example.creacion.Singleton;
@@ -51,6 +52,9 @@ public class Main {
                     System.out.println("    Observer");
                     Observerprueba observerprueba = new Observerprueba();
                     observerprueba.ejecutar();
+                    System.out.println("    Strategy");
+                    Strategy strategy= new Strategy();
+                    strategy.ejecutar();
                     break;
                 default:
                     break;
