@@ -1,11 +1,29 @@
 package org.example.creacion;
 
-public class Factory {
+import java.util.ArrayList;
+import java.util.List;
+
+public class Factory{
 
     /**
      * Simplifica el proceso de construccion de objetos,
      * en este caso por medio de un parametro "tipo" construimos el objeto esperado.
      * */
+
+        public void ejecutarCirculo() {
+            var circulo = new Circulo();
+            circulo.dibujar();
+
+    }
+    public void ejecutarCuadrado() {
+        var cuadrado = new Cuadrado();
+        cuadrado.dibujar();
+    }
+    public void ejecutarTriangulo() {
+        var triangulo = new Triangulo();
+        triangulo.dibujar();
+
+    }
 }
 
 
