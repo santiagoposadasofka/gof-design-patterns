@@ -6,6 +6,11 @@ public class Adapter {
      * esta desarrollado o escrito en un leguaje ajeno para que pueda
      * ser interpretado por el recurso esperado
      * */
+
+    public static void ejecutar(String archivo) {
+        AdaptadorDeAudio adaptador = new AdaptadorDeAudio();
+        adaptador.reproducir(archivo);
+    }
 }
 
 
