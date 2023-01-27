@@ -1,5 +1,8 @@
 package org.example.estructura;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Proxy {
 
     /**
@@ -7,6 +10,16 @@ public class Proxy {
      * para asi validar informacion, permisos o lo que sea de interes antes
      * de permitit el acceso a la información
      * */
+    public void ejecut(){
+        System.out.println("___________Proxy Imagen _______________________");
+        List<Imagen> LImagenes = new ArrayList<>();
+        LImagenes.add(new ImagenProxy("c:oi/fotos"));
+        LImagenes.add(new ImagenReal("c:oi/image"));
+
+        for (Imagen image:LImagenes ) {
+            image.mostrar();
+        }
+    }
 }
 
 interface Imagen {
