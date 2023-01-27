@@ -4,6 +4,7 @@ import org.example.creacion.Builder;
 import org.example.creacion.Factory;
 import org.example.creacion.Singleton;
 import org.example.estructura.Adapter;
+import org.example.estructura.Decorator;
 
 import java.lang.module.Configuration;
 
@@ -30,6 +31,11 @@ public class Main {
 
         Adapter adapter = new Adapter();
         adapter.reproducirAudio();
+
+        System.out.println("-------------------------------------------------------------------------------------");
+
+        Decorator decorator = new Decorator();
+        decorator.prepararBebida();
 
     }
 }
