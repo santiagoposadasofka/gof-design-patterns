@@ -36,7 +36,7 @@ public class Main {
         factory.ejecutar();
 
         System.out.println(" ");
-        System.out.println("***********   Factory   ***********");
+        System.out.println("***********   Singleton   ***********");
         System.out.println(" ");
         Singleton singleton = new Singleton();
         singleton.ejecutar();

@@ -13,7 +13,7 @@ public class Strategy {
         RarCompressionStrategy rarCompressionStrategy = new RarCompressionStrategy();
         ZipCompressionStrategy zipCompressionStrategy = new ZipCompressionStrategy();
         CompressionContext compressionContext = new CompressionContext();
-        System.out.println("Implementar libreria de File");
+        System.out.println("Implementando libreria de File");
     }
 }
 
