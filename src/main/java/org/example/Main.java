@@ -1,11 +1,18 @@
 package org.example;
 
+import org.example.comprtamiento.Mediator;
+import org.example.comprtamiento.Observador;
+import org.example.comprtamiento.Strategy;
 import org.example.creacion.Builder;
 import org.example.creacion.Factory;
 import org.example.creacion.Singleton;
 import org.example.estructura.Adapter;
 import org.example.estructura.Decorator;
 import org.example.estructura.Proxy;
+
+import java.io.File;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
@@ -31,7 +38,18 @@ public class Main {
         Proxy proxy = new Proxy();
         proxy.ejecutar("desktop");
         System.out.println("-----Patrones de tipo Comportamiento--------");
-
+        System.out.println("-------Patron mediador-------");
+        Mediator.ejecutar();
+        System.out.println("-------Patron Observador-------");
+        Observador observador = new Observador();
+        observador.ejecutar();
+        System.out.println("------Patron Estrategico----------");
+        Strategy strategy = new Strategy();
+        List<File> files = new ArrayList<>();
+        files.add(new File("archivo1.txt"));
+        files.add(new File("archivo2.txt"));
+        strategy.ejecutar(files);
 
     }
+
 }
