@@ -1,4 +1,4 @@
-package org.example.comprtamiento;
+package org.example.comprtamiento.mediator;
 
 
 import org.example.comprtamiento.mediator.ChatMediator;
