@@ -1,6 +1,21 @@
 package org.example.estructura;
 
 public class Adapter {
+    public void ejecutar(){
+        ReproductorMp3 reproductorMp3 = new ReproductorMp3();
+        reproductorMp3.reproducir("monotonia.mp3");
+
+        ReproductorWav reproductorWav = new ReproductorWav();
+        reproductorWav.reproducir("monotonia.wav");
+
+        ReproductorWav reproductorWav1 = new ReproductorWav();
+        reproductorWav1.reproducir("tusa.wav");
+
+        AdaptadorDeAudio adaptadorDeAudio = new AdaptadorDeAudio();
+        adaptadorDeAudio.reproducir("tusa.wav");
+
+
+    }
     /**
      * Permite cerrar brechas o transformar un elemento que
      * esta desarrollado o escrito en un leguaje ajeno para que pueda

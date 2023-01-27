@@ -2,6 +2,8 @@ package org.example;
 
 import org.example.creacion.Builder;
 import org.example.creacion.Factory;
+import org.example.estructura.Adapter;
+import org.example.estructura.Decorator;
 
 public class Main {
     public static void main(String[] args) {
@@ -16,8 +18,16 @@ public class Main {
         Factory dibujar = new Factory();
         dibujar.dibujarFigura();
 
-        System.out.println("----SINGLETON-------");
+        System.out.println("----ESTRUCTURAL-------");
+        System.out.println("----ADAPTER-------");
 
+        Adapter adapter = new Adapter();
+        adapter.ejecutar();
+
+        System.out.println("----ADAPTER-------");
+
+        Decorator decorar = new Decorator();
+        decorar.decorar();
 
     }
 }

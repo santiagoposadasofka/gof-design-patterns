@@ -1,12 +1,19 @@
 package org.example.estructura;
 
 public class Decorator {
+    public void decorar(){
+        Cafe cafe = new Cafe();
+        System.out.println(cafe.costo());
+        System.out.println("adición de leche");
+        Leche leche = new Leche(cafe);
+        System.out.println(leche.costo());
+
+    }
 
     /**
      * Permite a partir de una base añadir funciones o informacion adicional
      * */
 }
-
 
 abstract class Bebida {
     String descripcion = "Bebida desconocida";
@@ -21,6 +28,7 @@ abstract class Bebida {
 class Cafe extends Bebida {
     public Cafe() {
         descripcion = "Café";
+        System.out.println(descripcion);
     }
 
     public double costo() {

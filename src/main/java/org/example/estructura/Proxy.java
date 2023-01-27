@@ -1,6 +1,9 @@
 package org.example.estructura;
 
 public class Proxy {
+    public void ejecutar(){
+
+    }
 
     /**
      * Es un intermediario que se pone al frente del recurso real
