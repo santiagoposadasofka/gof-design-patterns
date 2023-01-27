@@ -5,18 +5,18 @@ class CondicionesActuales implements IObserver, DisplayElement {
     private float humedad;
     private float presion;
 
+    public CondicionesActuales() {
+    }
     public CondicionesActuales(float temp, float humedad, float presion) {
         this.temp = temp;
         this.humedad = humedad;
-        this.presion = presion;
+       this.presion = presion;
     }
 
     public float temp() {
         return temp;
     }
 
-    public CondicionesActuales() {
-    }
 
     public CondicionesActuales setTemp(float temp) {
         this.temp = temp;
@@ -44,8 +44,14 @@ class CondicionesActuales implements IObserver, DisplayElement {
     @Override
     public void update(float temp, float humedad, float presion) {
         this.temp = temp;
+        if (temp > 30) {
+            System.out.println("El aire acondicionado se ha encendido");
+        }else{
+            System.out.println("El aire acondicionado esta apagado");
+        }
         this.humedad = humedad;
         this.presion = presion;
+        this.display();
     }
 
     @Override

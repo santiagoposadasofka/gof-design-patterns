@@ -40,4 +40,14 @@ class Clima implements Subject {
     public void medidasChanged() {
         notifyObservers();
     }
+
+    @Override
+    public String toString() {
+        return "Clima{" +
+                "observadores=" + observadores +
+                ", temp=" + temp +
+                ", humedad=" + humedad +
+                ", presion=" + presion +
+                '}';
+    }
 }

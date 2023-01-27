@@ -10,61 +10,69 @@ import org.example.estructura.decorator.Decorator;
 import org.example.estructura.patronAdapter.Adapter;
 import org.example.estructura.proxy.Proxy;
 
+import java.sql.SQLOutput;
+
 public class Main {
     public static void main(String[] args) {
 
-
-
-        System.out.println("Hello world!");
-
+        System.out.println("Hello world!\n");
+        System.out.println("------------------------------------------------------");
+        System.out.println("   ** Patrones de diseño Comportamiento *** ");
+        System.out.println("------------------------------------------------------\n");
+        System.out.println("Patron de diseño Mediator\n");
+        Mediator.ejecutar();
         System.out.println();
-        System.out.println("Patron de diseño Builder");
+
+        System.out.println("Patron de diseño Observer\n");
+        Observer.ejecutar();
+        System.out.println();
+
+        System.out.println("Patron de diseño Strategy\n");
+        Strategy strategy = new Strategy();
+        strategy.ejecutarZip();
+
+        System.out.println("------------------------------------------------------");
+        System.out.println("  ** Patrones de diseño Creacion ***");
+        System.out.println("------------------------------------------------------");
+
+        System.out.println("Patron de diseño Builder\n");
         Builder builder = new Builder();
         builder.ejecutar();
-
         System.out.println();
-        System.out.println("Patron de diseño Factory");
+
+        System.out.println("Patron de diseño Factory\n");
         Factory factory = new Factory();
         factory.ejecutarCirculo();
         factory.ejecutarTriangulo();
         factory.ejecutarCuadrado();
 
         System.out.println();
-        System.out.println("Patron de diseño Singleton");
+        System.out.println("Patron de diseño Singleton\n");
         Singleton singleton = new Singleton();
         singleton.ejecutar();
 
-        System.out.println();
-        System.out.println("Patron de diseño Strategy");
-        Strategy strategy = new Strategy();
-        strategy.ejecutarZip();
+        System.out.println("------------------------------------------------------");
+        System.out.println("  ** Patrones de diseño Estructura ***\n");
+        System.out.println("------------------------------------------------------");
 
-        System.out.println();
-        System.out.println("Patron de diseño Decorator");
+        System.out.println("Patron de diseño Decorator\n");
         Decorator decorator = new Decorator();
         decorator.ejecutarCafe();
         decorator.ejecutarLeche();
 
-
         System.out.println();
-        System.out.println("Patron de diseño Adapter");
+        System.out.println("Patron de diseño Adapter\n");
         Adapter adapter = new Adapter();
         adapter.ejecutarMp3();
         adapter.ejecutarWav();
 
-        System.out.println("Patron de diseño Proxy");
+        System.out.println();
+        System.out.println("Patron de diseño Proxy\n");
         Proxy proxy = new Proxy();
         proxy.ejecutarImagenProxy();
         proxy.ejecutarImagenReal();
 
-        System.out.println();
-        System.out.println("Patron de diseño Mediator");
-       Mediator.ejecutar();
 
-        System.out.println();
-        System.out.println("Patron de diseño Observer");
-        Observer observer = new Observer();
-        observer.ejecutarCondicionActual();
 
     }
 }
