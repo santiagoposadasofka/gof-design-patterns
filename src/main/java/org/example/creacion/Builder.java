@@ -8,13 +8,13 @@ public class Builder {
      * */
 
     public void ejecutar (){
-        Comida hamburguesa = new ComidaBuilder()
-
+        Comida sanduchitoPersonal = new ComidaBuilder()
                 .carne("Res")
                 .pan("Blanco")
                 .ketchup("mucha")
                 .mayonesa("poca")
                 .build();
+        System.out.println(sanduchitoPersonal.toString());
     }
 
 

@@ -7,7 +7,9 @@ import org.example.comprtamiento.Mediator;
 import org.example.creacion.Factory;
 import org.example.creacion.Singleton;
 import org.example.creacion.Builder;
-
+import org.example.estructura.Adapter;
+import org.example.estructura.Decorator;
+import org.example.estructura.Proxy;
 
 
 public class Main {
@@ -17,7 +19,7 @@ public class Main {
         int opcion;
 
         do {
-            System.out.println("Ingrese la opcion que desee");
+            System.out.println("Ingrese la opcion que  la opcion, 0 es para terminatr la ejecucion");
             opcion = info.nextInt();
             switch (opcion){
 
@@ -51,10 +53,27 @@ public class Main {
                     singleton.ejecutar();
                     break;
                 case 6:
-                    System.out.println("    Patron BUILDER  ");
+                    System.out.println("    Patron BUILDER- En Proceso  ");
                     Builder builder = new Builder();
                     builder.ejecutar();
                     break;
+                case 7:
+                    System.out.println("    Patron ADAPTER  ");
+                    Adapter adapter = new Adapter();
+                    adapter.ejecutar();
+                    break;
+                case 8:
+                    System.out.println("    Patron DECORATOR  ");
+                    Decorator decorator = new Decorator();
+                    decorator.ejecutar();
+                    break;
+                case 9:
+                    System.out.println("    Patron PROXY  ");
+                    Proxy proxy = new Proxy();
+                    proxy.ejecutar();
+                    break;
+
+
 
 
 
