@@ -5,22 +5,26 @@ public class Builder {
     /**
      * Nos permite construir un objeto con diferentes niveles de especificidad,
      * o con diferente cantidad de atributos de forma facil y legible.
-     * */
+     */
 
+    public void ejecutar() {
+        Comida sanducheSencillo = new ComidaBuilder()
+                .carne("jamon")
+                .lechuga("crespa")
+                .queso("Mozarella").build();
+        System.out.println( "sanducheSencillo : "+sanducheSencillo.toString());
+        Comida sanducheFull = new ComidaBuilder()
+                .carne("Res")
+                .tomate("en rodajas")
+                .lechuga("crespa")
+                .tomate("Mozarella")
+                .mostaza("Mucha")
+                .ketchup("poca")
+                .build();
+        System.out.println("sanducheFull : "+sanducheFull.toString());
 
-    Comida sanducheSencillo = new ComidaBuilder()
-            .carne("jamon")
-            .lechuga("crespa")
-            .queso("Mozarella").build();
+    }
 
-    Comida sanducheFull = new ComidaBuilder()
-            .carne("Res")
-            .tomate("en rodajas")
-            .lechuga("crespa")
-            .tomate("Mozarella")
-            .mostaza("Mucha")
-            .ketchup("poca")
-            .build();
 }
 
 
@@ -64,6 +68,52 @@ class Comida {
 
     public void setKetchup(String ketchup) {
         this.ketchup = ketchup;
+    }
+
+    public String getPan() {
+        return pan;
+    }
+
+    public String getCarne() {
+        return carne;
+    }
+
+    public String getLechuga() {
+        return lechuga;
+    }
+
+    public String getTomate() {
+        return tomate;
+    }
+
+    public String getQueso() {
+        return queso;
+    }
+
+    public String getMayonesa() {
+        return mayonesa;
+    }
+
+    public String getMostaza() {
+        return mostaza;
+    }
+
+    public String getKetchup() {
+        return ketchup;
+    }
+
+    @Override
+    public String toString() {
+        return "Comida{" +
+                "pan='" + pan + '\'' +
+                ", carne='" + carne + '\'' +
+                ", lechuga='" + lechuga + '\'' +
+                ", tomate='" + tomate + '\'' +
+                ", queso='" + queso + '\'' +
+                ", mayonesa='" + mayonesa + '\'' +
+                ", mostaza='" + mostaza + '\'' +
+                ", ketchup='" + ketchup + '\'' +
+                '}';
     }
 }
 
@@ -114,7 +164,11 @@ class ComidaBuilder {
         return this;
     }
 
-    public Comida build(){
+    public Comida build() {
         return this.comida;
+    }
+
+    public Comida getComida() {
+        return comida;
     }
 }
