@@ -4,9 +4,14 @@ import java.io.File;
 import java.util.List;
 
 public class Strategy {
+    public void ejecutar (){
+        Strategy estrategia = new Strategy();
+        CompressionContext compress = new CompressionContext();
+
+    }
 
     /**
-     * Permite definir un proposito pero dependiendo del contexto implementarlo.
+     * Permite definir un proposito pero dependiendo del contexto a implementarlo.
      * */
 }
 
