@@ -5,6 +5,7 @@ import org.example.creacion.Factory;
 import org.example.creacion.Singleton;
 import org.example.estructura.Adapter;
 import org.example.estructura.Decorator;
+import org.example.estructura.Proxy;
 
 public class Main {
     public static void main(String[] args) {
@@ -31,5 +32,9 @@ public class Main {
         System.out.println("-----------Decorator---------------");
         Decorator decorator = new Decorator();
         decorator.ejecutar();
+
+        System.out.println("-----------Proxy---------------");
+        Proxy proxy = new Proxy();
+        proxy.ejecutar();
     }
 }
