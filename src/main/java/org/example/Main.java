@@ -3,6 +3,7 @@ package org.example;
 import org.example.creacion.Builder;
 import org.example.creacion.Factory;
 import org.example.creacion.Singleton;
+import org.example.estructura.Adapter;
 
 import java.lang.module.Configuration;
 
@@ -24,6 +25,11 @@ public class Main {
          * El método getInfo() es estático, por esto se debe acceder desde un contexto estático
          */
         Singleton.getInfo();
+
+        System.out.println("---------------------------------------------------------------------------------");
+
+        Adapter adapter = new Adapter();
+        adapter.reproducirAudio();
 
     }
 }

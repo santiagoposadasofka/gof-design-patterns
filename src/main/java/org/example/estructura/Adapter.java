@@ -6,6 +6,19 @@ public class Adapter {
      * esta desarrollado o escrito en un leguaje ajeno para que pueda
      * ser interpretado por el recurso esperado
      * */
+
+    public void reproducirAudio(){
+        /**
+         * Se implementa método reproducirAudio() para utilizar el método reproducir de la interface ReproductorDeAudio
+         */
+        String cancion1 = "Equipo de carretera.wav";
+        String cancion2 = "Quien va.wav";
+
+        AdaptadorDeAudio adaptadorDeAudio = new AdaptadorDeAudio();
+        adaptadorDeAudio.reproducir(cancion1);
+        AdaptadorDeAudio adaptadorDeAudio1 = new AdaptadorDeAudio();
+        adaptadorDeAudio1.reproducir(cancion2);
+    }
 }
 
 
