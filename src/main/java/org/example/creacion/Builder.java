@@ -21,6 +21,12 @@ public class Builder {
             .mostaza("Mucha")
             .ketchup("poca")
             .build();
+
+
+
+    Comida sanducheConTodo= new ComidaBuilder()
+            .pan("Frances")
+            .build();
 }
 
 
