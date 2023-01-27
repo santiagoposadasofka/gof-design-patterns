@@ -8,6 +8,16 @@ public class Mediator {
     /**
      * Permite interactuar con diferentes objetos por medio de un intermediario.
      * */
+    public void Ejecutar(){
+        ChatMediator chatMediator = new ChatRoom();
+        UsuarioNormal usuarioNormal =new UsuarioNormal(chatMediator,"juanita");
+        chatMediator.agregarUsuario(usuarioNormal);
+        //chatMediator.enviarMensaje("hola estoy enviando",usuarioNormal); ¿porque no tengo necesidad de ponerlo?
+        usuarioNormal.enviarMensaje("estabas lindo hoy");
+        usuarioNormal.recibirMensaje("ya lo se mijo");
+
+
+    }
 }
 
 
