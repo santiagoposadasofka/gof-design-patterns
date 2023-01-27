@@ -1,14 +1,20 @@
 package org.example.creacion;
 
+
 public class Factory {
 
     /**
      * Simplifica el proceso de construccion de objetos,
      * en este caso por medio de un parametro "tipo" construimos el objeto esperado.
-     * */
+     */
+
+    public void crearFigura(String tipo) {
+
+        FiguraGeometrica nuevaFigura = FiguraGeometricaFactory.crearFiguraGeometrica(tipo);
+        nuevaFigura.dibujar();
+
+    }
 }
-
-
 
 interface FiguraGeometrica {
     void dibujar();
@@ -36,7 +42,10 @@ class Circulo implements FiguraGeometrica {
 }
 
 class FiguraGeometricaFactory {
-    public FiguraGeometrica crearFiguraGeometrica(String tipo) {
+    /*
+    Al momento de implementar fue necesario cambiar el tipo de public a public static de lo contrario el IDE mostraba alerta
+     */
+    public static FiguraGeometrica crearFiguraGeometrica(String tipo) {
         if (tipo == null) {
             return null;
         }
@@ -46,7 +55,7 @@ class FiguraGeometricaFactory {
             return new Triangulo();
         } else if (tipo.equalsIgnoreCase("CIRCULO")) {
             return new Circulo();
-        }else{
+        } else {
             return null;
         }
     }

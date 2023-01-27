@@ -5,7 +5,22 @@ public class Adapter {
      * Permite cerrar brechas o transformar un elemento que
      * esta desarrollado o escrito en un leguaje ajeno para que pueda
      * ser interpretado por el recurso esperado
-     * */
+     */
+
+    public void archivoSonido() {
+        ReproductorDeAudio nuevoArchivo1 = new ReproductorMp3();
+        nuevoArchivo1.reproducir("Las mañanitas.mp3");
+        ReproductorDeAudio nuevoArchivo2 = new ReproductorWav();
+        nuevoArchivo2.reproducir("Buenos dias.wav");
+        ReproductorDeAudio nuevoArchivo3 = new AdaptadorDeAudio();
+        nuevoArchivo3.reproducir("Las mañanitas.wav");
+
+
+
+
+    }
+
+
 }
 
 

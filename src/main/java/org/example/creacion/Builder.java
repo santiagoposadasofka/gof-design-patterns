@@ -5,22 +5,43 @@ public class Builder {
     /**
      * Nos permite construir un objeto con diferentes niveles de especificidad,
      * o con diferente cantidad de atributos de forma facil y legible.
-     * */
+     */
+
+    public void crearSandwich() {
+
+        Comida sanducheSencillo = new ComidaBuilder()
+                .carne("jamon")
+                .lechuga("crespa")
+                .queso("Mozarella").build();
+        System.out.println(sanducheSencillo.toString());
 
 
-    Comida sanducheSencillo = new ComidaBuilder()
-            .carne("jamon")
-            .lechuga("crespa")
-            .queso("Mozarella").build();
+        Comida sanducheFull = new ComidaBuilder()
+                .carne("Res")
+                .tomate("en rodajas")
+                .lechuga("crespa")
+                .tomate("Mozarella")
+                .mostaza("Mucha")
+                .ketchup("poca")
+                .build();
+        System.out.println(sanducheFull.toString());
 
-    Comida sanducheFull = new ComidaBuilder()
-            .carne("Res")
-            .tomate("en rodajas")
-            .lechuga("crespa")
-            .tomate("Mozarella")
-            .mostaza("Mucha")
-            .ketchup("poca")
-            .build();
+        Comida sanducheConTodo = new ComidaBuilder()
+                .pan("Frances")
+                .carne("Pavo")
+                .lechuga("Crespa")
+                .tomate("Verde")
+                .queso("Doble crema")
+                .mostaza("Muy poca")
+                .ketchup("Mucha")
+                .mayonesa("Mucha")
+                .build();
+        System.out.println(sanducheConTodo.toString());
+
+
+    }
+
+
 }
 
 
@@ -64,6 +85,36 @@ class Comida {
 
     public void setKetchup(String ketchup) {
         this.ketchup = ketchup;
+    }
+
+    @Override
+    public String toString() {
+        String sandwich = "El sandwich seleccionado contiene:";
+        if (pan != null) {
+            sandwich += "pan " + pan + ", ";
+        }
+        if (carne != null) {
+            sandwich += "carne de " + carne + ", ";
+        }
+        if (lechuga != null) {
+            sandwich += "lechuga " + lechuga + ", ";
+        }
+        if (tomate != null) {
+            sandwich += "tomate " + tomate + ", ";
+        }
+        if (queso != null) {
+            sandwich += "queso " + queso + ", ";
+        }
+        if (mayonesa != null) {
+            sandwich += mayonesa + " mayonesa" + ", ";
+        }
+        if (mostaza != null) {
+            sandwich += mostaza + " mostaza" + ", ";
+        }
+        if (ketchup != null) {
+            sandwich += ketchup + " ketchup" + ".";
+        }
+        return sandwich;
     }
 }
 
@@ -114,7 +165,7 @@ class ComidaBuilder {
         return this;
     }
 
-    public Comida build(){
+    public Comida build() {
         return this.comida;
     }
 }
