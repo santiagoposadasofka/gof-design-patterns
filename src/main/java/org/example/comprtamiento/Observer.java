@@ -64,7 +64,19 @@ class Clima implements Subject {
     public void medidasChanged() {
         notifyObservers();
     }
+
+    public void Ejecutar(){
+        Clima clima =new Clima();
+        CondicionesActuales condicionesActuales= new CondicionesActuales(5,10,123);
+        clima.registerObserver(condicionesActuales);
+        clima.setMedidas(10,20,256);
+        System.out.println(condicionesActuales.toString());
+
+    }
+
+
 }
+
 
 class CondicionesActuales implements Observer, DisplayElement {
     private float temp;
@@ -98,14 +110,7 @@ class CondicionesActuales implements Observer, DisplayElement {
                 '}';
     }
 
-    public void Ejecutar(){
-    Clima clima =new Clima();
-    CondicionesActuales condicionesActuales= new CondicionesActuales(5,10,123);
-    clima.registerObserver(condicionesActuales);//porque hiciste eso aca????
-    clima.setMedidas(10,20,256);
-    System.out.println(condicionesActuales.toString());//porque metimos condiciones actuales ahi entro ?? que se me guarda ahi pues?
 
-    }
 }
 
 
