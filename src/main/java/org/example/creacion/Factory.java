@@ -1,6 +1,17 @@
 package org.example.creacion;
 
 public class Factory {
+    public void dibujarFigura (){
+        Triangulo triangulo = new Triangulo();
+        triangulo.dibujar();
+
+        Cuadrado cuadrado = new Cuadrado();
+        cuadrado.dibujar();
+
+        Circulo circulo = new Circulo();
+        circulo.dibujar();
+
+    }
 
     /**
      * Simplifica el proceso de construccion de objetos,

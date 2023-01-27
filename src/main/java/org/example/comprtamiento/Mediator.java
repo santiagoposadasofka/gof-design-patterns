@@ -4,7 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Mediator {
+    public void ejecutar(){
 
+    }
     /**
      * Permite interactuar con diferentes objetos por medio de un intermediario.
      * */
