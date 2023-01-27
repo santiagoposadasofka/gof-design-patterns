@@ -21,8 +21,8 @@ public class Mediator {
         chatRoom.agregarUsuario(usuario);
         chatRoom.agregarUsuario(usuario1);
 
-        usuario.enviarMensaje("Saludo a Maria");
-        usuario1.enviarMensaje("Saludo a Gretty");
+        usuario.enviarMensaje("Saludo a Maria ٩(●ᴗ●)۶");
+        usuario1.enviarMensaje("Saludo a Gretty ٩(^ᴗ^)۶");
     }
 }
 

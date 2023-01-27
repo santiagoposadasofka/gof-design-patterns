@@ -40,7 +40,7 @@ interface FiguraGeometrica {
 class Cuadrado implements FiguraGeometrica {
     @Override
     public void dibujar() {
-        System.out.println("Dibujando un cuadrado");
+        System.out.println("Dibujando un cuadrado... ⬛");
     }
 }
 
@@ -50,7 +50,7 @@ class Cuadrado implements FiguraGeometrica {
 class Triangulo implements FiguraGeometrica {
     @Override
     public void dibujar() {
-        System.out.println("Dibujando un triángulo");
+        System.out.println("Dibujando un triángulo... ▲");
     }
 }
 
@@ -60,7 +60,7 @@ class Triangulo implements FiguraGeometrica {
 class Circulo implements FiguraGeometrica {
     @Override
     public void dibujar() {
-        System.out.println("Dibujando un círculo");
+        System.out.println("Dibujando un círculo... ⚫");
     }
 }
 

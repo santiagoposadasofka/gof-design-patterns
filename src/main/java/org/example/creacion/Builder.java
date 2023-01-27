@@ -78,7 +78,7 @@ class Comida {
      */
     @Override
     public String toString() {
-        return "Así quedó el sandwich que elegiste: \n" +
+        return "Así quedó el sandwich que elegiste: \uD83E\uDD6A\n" +
                 "Pan --> " + pan + "\n" +
                 "Carne --> " + carne + "\n" +
                 "Lechuga --> " + lechuga + "\n" +

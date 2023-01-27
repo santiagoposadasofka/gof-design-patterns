@@ -46,14 +46,14 @@ class ImagenReal implements Imagen {
      * Método que permite mostrar la imagen
      */
     public void mostrar() {
-        System.out.println("Mostrando imagen: " + rutaArchivo);
+        System.out.println("100% ██████████ Mostrando imagen:  " + rutaArchivo);
     }
 
     /**
      * Método que permite cargar la imagen
      */
     private void cargarImagen() {
-        System.out.println("Cargando imagen: " + rutaArchivo);
+        System.out.println("20% ███▒▒▒▒▒▒▒ Cargando imagen: " + rutaArchivo);
     }
 }
 

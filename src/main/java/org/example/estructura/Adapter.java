@@ -36,7 +36,7 @@ class ReproductorMp3 implements ReproductorDeAudio {
     @Override
     public void reproducir(String archivo) {
         if (archivo.endsWith(".mp3")) {
-            System.out.println("Reproduciendo archivo MP3: " + archivo);
+            System.out.println("Reproduciendo archivo MP3: ♫ \uD834\uDD1E " + archivo);
             return;
         }
         throw new IllegalArgumentException("Formato invalido");
@@ -50,7 +50,7 @@ class ReproductorWav implements ReproductorDeAudio {
     @Override
     public void reproducir(String archivo) {
         if (archivo.endsWith(".wav")) {
-            System.out.println("Reproduciendo archivo WAV: " + archivo);
+            System.out.println("Reproduciendo archivo WAV: ♩ ♬ " + archivo);
             return;
         }
         throw new IllegalArgumentException("Formato invalido");

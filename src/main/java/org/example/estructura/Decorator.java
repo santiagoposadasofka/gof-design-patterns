@@ -11,7 +11,7 @@ public class Decorator {
      */
     public void ejecutarDecorator(){
         Bebida bebida = new Cafe();
-        System.out.println("Descripción: " + bebida.getDescripcion());
+        System.out.println("Descripción: ☕ " + bebida.getDescripcion());
         System.out.println("Costo: " + bebida.costo());
 
         bebida = new Leche(bebida);
