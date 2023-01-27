@@ -8,9 +8,36 @@ public class Mediator {
     /**
      * Permite interactuar con diferentes objetos por medio de un intermediario.
      * */
-    public class ejecutar{
 
-    }
+        public void ejecutor(){
+
+            System.out.println("_____________________Mediator_______________________________");
+
+            ChatMediator chatRoom = new ChatRoom();
+
+            Usuario usuario1 = new UsuarioNormal(chatRoom,"Pedro");
+            chatRoom.agregarUsuario(usuario1);
+            chatRoom.enviarMensaje("Empleado del mes, felicidades",usuario1);
+
+            Usuario usuario2 = new UsuarioNormal(chatRoom,"Pablo");
+            chatRoom.agregarUsuario(usuario2);
+            chatRoom.enviarMensaje("Has realizado el pago con exito",usuario2);
+
+            Usuario usuario3 = new UsuarioNormal(chatRoom,"Iker");
+            chatRoom.agregarUsuario(usuario3);
+            chatRoom.enviarMensaje("Semestre aprobado",usuario3);
+
+            Usuario usuario4 = new UsuarioNormal(chatRoom,"Maria");
+            chatRoom.agregarUsuario(usuario4);
+            chatRoom.enviarMensaje("Viaje aplazado por motivos personales",usuario4);
+
+            Usuario usuario5 = new UsuarioNormal(chatRoom,"Flor");
+            chatRoom.agregarUsuario(usuario5);
+            chatRoom.enviarMensaje("Cita medica cancelada",usuario5);
+
+        }
+
+
 }
 
 

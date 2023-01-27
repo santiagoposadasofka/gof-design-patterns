@@ -8,6 +8,19 @@ import java.util.List;
 /**
  * Permite notificar a todos los interesados sobre un cambio.
  * */
+public class Observere{
+    public void ejecut(){
+
+        System.out.println("________________________Observer__________________");
+        Clima clima = new Clima();
+        CondicionesActuales actuales = new CondicionesActuales(21,66,10);
+        actuales.update(17,60,14);
+        System.out.println(actuales.toString());
+
+
+    }
+}
+
 interface Observer {
     void update(float temp, float humedad, float presion);
 }
