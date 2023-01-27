@@ -4,10 +4,20 @@ package org.example.comprtamiento;
 import java.util.ArrayList;
 import java.util.List;
 
-
 /**
  * Permite notificar a todos los interesados sobre un cambio.
  * */
+
+public class ObserverEjecutar {
+
+    public void ejecutar(){
+
+        Clima clima = new Clima();
+        clima.setMedidas(27, 18, 22);
+
+
+    }
+}
 interface Observer {
     void update(float temp, float humedad, float presion);
 }
@@ -17,8 +27,6 @@ interface Subject {
     void removeObserver(Observer o);
     void notifyObservers();
 }
-
-
 
 interface DisplayElement {
     void display();

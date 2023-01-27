@@ -10,6 +10,25 @@ public class Singleton {
      * */
     public void ejecutar(){
 
+        /**
+         * La instancia ya fue creada en el metodo getInstancia de la Clase Configuracion
+         */
+        Configuracion configuracion = Configuracion.getInstancia();
+        configuracion.setValor1("04");
+        configuracion.setValor2("22");
+
+        System.out.println("El Valor1 es: " + configuracion.getValor1());
+        System.out.println("El Valor2 es: " + configuracion.getValor2());
+
+        Configuracion configuracion1 = Configuracion.getInstancia();
+        configuracion.setValor1("28");
+        configuracion.setValor2("74");
+
+        System.out.println("El Valor1 es: " + configuracion.getValor1());
+        System.out.println("El Valor2 es: " + configuracion.getValor2());
+
+
+
 
 
     }

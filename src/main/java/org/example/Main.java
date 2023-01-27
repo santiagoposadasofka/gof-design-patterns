@@ -1,6 +1,7 @@
 package org.example;
 
 import org.example.comprtamiento.Mediator;
+import org.example.comprtamiento.ObserverEjecutar;
 import org.example.creacion.Builder;
 import org.example.creacion.Factory;
 import org.example.creacion.Singleton;
@@ -23,6 +24,7 @@ public class Main {
         System.out.println("-----------Singleton----------------");
         Singleton singleton = new Singleton();
         singleton.ejecutar();
+        System.out.println("\n");
 
         System.out.println("-------Patrones de Diseño de Estructura -----------");
 
@@ -37,11 +39,16 @@ public class Main {
         System.out.println("-----------Proxy---------------");
         Proxy proxy = new Proxy();
         proxy.ejecutar();
+        System.out.println("\n");
 
         System.out.println("-------Patrones de Diseño de Comportamiento -----------");
 
         System.out.println("-----------Mediator---------------");
         Mediator mediator = new Mediator();
         mediator.ejecutar();
+
+        System.out.println("-----------Observer---------------");
+        ObserverEjecutar observerEjecutar = new ObserverEjecutar();
+        observerEjecutar.ejecutar();
     }
 }
