@@ -1,15 +1,19 @@
 package org.example.comprtamiento;
 
-
 import java.util.ArrayList;
 import java.util.List;
 
+// Permite notificar a todos los interesados sobre un cambio.
 
-/**
- * Permite notificar a todos los interesados sobre un cambio.
- * */
+public class ObserverDoer {
+    public void ejecutar() {
+        //...
+    }
+}
+
 interface Observer {
     void update(float temp, float humedad, float presion);
+
 }
 
 interface Subject {

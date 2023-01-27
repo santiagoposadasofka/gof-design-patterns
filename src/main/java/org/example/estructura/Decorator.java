@@ -1,10 +1,11 @@
 package org.example.estructura;
 
-public class Decorator {
+// Permite añadir funciones o información adicional a partir de una base.
 
-    /**
-     * Permite a partir de una base añadir funciones o informacion adicional
-     * */
+public class Decorator {
+    public void ejecutar() {
+        //...
+    }
 }
 
 

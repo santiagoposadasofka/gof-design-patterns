@@ -1,12 +1,14 @@
 package org.example.creacion;
 
+/*
+ * Permite construir un objeto con diferentes niveles de especificidad, o con diferente cantidad de atributos de forma
+ * fácil y legible.
+ */
+
 public class Builder {
-
-    /**
-     * Nos permite construir un objeto con diferentes niveles de especificidad,
-     * o con diferente cantidad de atributos de forma facil y legible.
-     * */
-
+    public void ejecutar() {
+        //...
+    }
 
     Comida sanducheSencillo = new ComidaBuilder()
             .carne("jamon")

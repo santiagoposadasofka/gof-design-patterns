@@ -3,13 +3,13 @@ package org.example.comprtamiento;
 import java.util.ArrayList;
 import java.util.List;
 
+// Permite interactuar con diferentes objetos por medio de un intermediario.
+
 public class Mediator {
-
-    /**
-     * Permite interactuar con diferentes objetos por medio de un intermediario.
-     * */
+    public void ejecutar() {
+        //...
+    }
 }
-
 
 interface ChatMediator {
     void enviarMensaje(String mensaje, Usuario usuario);

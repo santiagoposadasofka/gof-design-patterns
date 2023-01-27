@@ -1,15 +1,16 @@
 package org.example.creacion;
 
+/*
+ * Permite asegurar que solo haya una instancia de un objeto esperado, ya sea porque se quiere que solo haya un objeto
+ * de este tipo y que a partir de él, todos quienes lo requieran tengan que tomar la información a partir de este,
+ * evitando que haya diferencias entre los interesados a la hora de tomar información.
+ */
+
 public class Singleton {
-
-    /**
-     * Nos permite asegurar que solo haya una instancia de un objeto esperado,
-     * ya sea por que queremos que solo haya un objeto de este tipo y que a partir de el,
-     * todos quien lo requieran tengan que tomar la informacion a partir de este,
-     * evitando que hayan diferencias entre los interesados a la hora de tomar informacion
-     * */
+    public void ejecutar() {
+        //...
+    }
 }
-
 
 class Configuracion {
     private static Configuracion instancia = null;

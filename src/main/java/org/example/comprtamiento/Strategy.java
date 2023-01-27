@@ -3,13 +3,13 @@ package org.example.comprtamiento;
 import java.io.File;
 import java.util.List;
 
+// Permite definir un propósito pero dependiendo del contexto, implementarlo.
+
 public class Strategy {
-
-    /**
-     * Permite definir un proposito pero dependiendo del contexto implementarlo.
-     * */
+    public void ejecutar() {
+        //...
+    }
 }
-
 
 interface CompressionStrategy {
     void compressFiles(List<File> files);
