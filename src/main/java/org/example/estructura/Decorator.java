@@ -3,11 +3,11 @@ package org.example.estructura;
 public class Decorator {
 
     public void ejecutar () {
-        Bebida cafe = new Cafe();
-        System.out.println("Descripción: " + cafe.getDescripcion());
-        System.out.println("Costo: $" + cafe.costo());
+        Bebida Cocacola = new Cocacola();
+        System.out.println("Descripción: " + Cocacola.getDescripcion());
+        System.out.println("Costo: $" + Cocacola.costo());
 
-        Bebida cafeConLeche = new Leche(cafe);
+        Bebida cafeConLeche = new Leche(Cocacola);
         System.out.println("Descripción: " + cafeConLeche.getDescripcion());
         System.out.println("Costo: $" + cafeConLeche.costo());
     }
@@ -28,9 +28,9 @@ abstract class Bebida {
     public abstract double costo();
 }
 
-class Cafe extends Bebida {
-    public Cafe() {
-        descripcion = "Café";
+class Cocacola extends Bebida {
+    public Cocacola() {
+        descripcion = "Cocacola";
     }
 
     public double costo() {
