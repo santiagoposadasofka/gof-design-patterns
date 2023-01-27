@@ -29,8 +29,18 @@ public void ejecutar(){
             .ketchup("poca")
             .build();
 
+    Comida sanducheVegetariano = new ComidaBuilder()
+            .pan("Pan oregano")
+            .carne("de lentejas")
+            .lechuga("crespa")
+            .queso("Mozarella")
+            .mostaza("mucha")
+            .tomate("en julianas")
+            .build();
+
     comidaBuild.add(sanducheSencillo);
     comidaBuild.add(sanducheFull);
+    comidaBuild.add(sanducheVegetariano);
 
         int i = 1;
 
