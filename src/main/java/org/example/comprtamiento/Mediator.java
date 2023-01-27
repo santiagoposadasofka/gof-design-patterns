@@ -3,11 +3,28 @@ package org.example.comprtamiento;
 import java.util.ArrayList;
 import java.util.List;
 
+
+
 public class Mediator {
 
     /**
      * Permite interactuar con diferentes objetos por medio de un intermediario.
      * */
+
+    public  void ejecutar(){
+        ChatRoom chatRoom = new ChatRoom();
+       UsuarioNormal user = new UsuarioNormal(chatRoom, "Carlos");
+       user.enviarMensaje("Hola a todos");
+       UsuarioNormal user2 = new UsuarioNormal(chatRoom, "Luna");
+       user.recibirMensaje("Hola a todos");
+
+
+
+
+
+
+
+    }
 }
 
 

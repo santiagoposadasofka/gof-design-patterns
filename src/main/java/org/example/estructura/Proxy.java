@@ -7,6 +7,12 @@ public class Proxy {
      * para asi validar informacion, permisos o lo que sea de interes antes
      * de permitit el acceso a la información
      * */
+
+    public void ejecutar(){
+        Imagen imagen = new ImagenProxy("http");
+        imagen.mostrar();
+
+    }
 }
 
 interface Imagen {

@@ -5,6 +5,22 @@ public class Decorator {
     /**
      * Permite a partir de una base añadir funciones o informacion adicional
      * */
+
+    public void ejecutar(){
+
+        Cafe cafe = new Cafe();
+        cafe.descripcion ="descafeinado";
+        cafe.costo();
+
+        System.out.println("La bebida es café: " + cafe.getDescripcion() + " costo " + cafe.costo());
+
+
+
+
+
+
+
+    }
 }
 
 

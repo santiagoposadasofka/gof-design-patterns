@@ -7,7 +7,15 @@ public class Builder {
      * o con diferente cantidad de atributos de forma facil y legible.
      * */
 
+public void ejecutar(){
+    Comida panini = new ComidaBuilder()
+            .carne("jamón york")
+            .lechuga("rúcula")
+            .tomate("tomate")
+            .mayonesa("Mayonesa")
+            .build();
 
+}
     Comida sanducheSencillo = new ComidaBuilder()
             .carne("jamon")
             .lechuga("crespa")
@@ -21,6 +29,7 @@ public class Builder {
             .mostaza("Mucha")
             .ketchup("poca")
             .build();
+
 }
 
 
@@ -117,4 +126,11 @@ class ComidaBuilder {
     public Comida build(){
         return this.comida;
     }
+
+public String toString(){
+        return "Sanduche: " + comida;
 }
+
+
+}
+
