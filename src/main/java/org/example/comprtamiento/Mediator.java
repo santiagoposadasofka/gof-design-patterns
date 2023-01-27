@@ -8,6 +8,21 @@ public class Mediator {
     /**
      * Permite interactuar con diferentes objetos por medio de un intermediario.
      * */
+    public void ejecutar(){
+        ChatMediator chatRoom = new ChatRoom();
+        Usuario usuario1 = new UsuarioNormal(chatRoom,"laura");
+        Usuario usuario2 = new UsuarioNormal(chatRoom,"pedro");
+        Usuario usuario3 = new UsuarioNormal(chatRoom,"rodrigo");
+        Usuario usuario4 = new UsuarioNormal(chatRoom,"patricia");
+        chatRoom.agregarUsuario(usuario1);
+        chatRoom.agregarUsuario(usuario2);
+        chatRoom.agregarUsuario(usuario3);
+        chatRoom.enviarMensaje("buenos dias laura",usuario2);
+        chatRoom.enviarMensaje("hola pedro",usuario3);
+        chatRoom.enviarMensaje("como va tu dia rodrigo", usuario1);
+        chatRoom.enviarMensaje("hoal muchachos",usuario4);
+
+    }
 }
 
 

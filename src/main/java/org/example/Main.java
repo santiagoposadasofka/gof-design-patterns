@@ -1,5 +1,6 @@
 package org.example;
 
+import org.example.comprtamiento.Mediator;
 import org.example.creacion.Builder;
 import org.example.creacion.Factory;
 import org.example.creacion.Singleton;
@@ -42,6 +43,10 @@ public class Main {
                     adapter.ejecutar();
                     break;
                 case 3:
+                    System.out.println("    Mediator");
+                    Mediator mediator = new Mediator();
+                    mediator.ejecutar();
+
                     break;
                 default:
                     break;
