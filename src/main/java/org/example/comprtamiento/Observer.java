@@ -63,6 +63,18 @@ class Clima implements Subject {
     public void medidasChanged() {
         notifyObservers();
     }
+
+    public void ejecutar() {
+        Clima clima = new Clima();
+        CondicionesActuales condicionesActuales = new CondicionesActuales(1, 1, 1);
+        clima.registerObserver(condicionesActuales);
+
+        clima.setMedidas(32, 25, 50);
+        condicionesActuales.display();
+        System.out.println(condicionesActuales.toString());
+    }
+
+
 }
 
 class CondicionesActuales implements Observer, DisplayElement {
