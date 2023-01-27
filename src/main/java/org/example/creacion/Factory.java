@@ -47,7 +47,7 @@ class FiguraGeometricaFactory {
             return new Triangulo();
         } else if (tipo.equalsIgnoreCase("CIRCULO")) {
             return new Circulo();
-        }else{
+        } else {
             return null;
         }
     }

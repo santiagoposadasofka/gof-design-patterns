@@ -25,7 +25,6 @@ public class Builder {
             .build();
 }
 
-
 class Comida {
     private String pan;
     private String carne;
@@ -70,7 +69,7 @@ class Comida {
 }
 
 class ComidaBuilder {
-    private Comida comida;
+    private final Comida comida;
 
     public ComidaBuilder() {
         comida = new Comida();
@@ -116,7 +115,7 @@ class ComidaBuilder {
         return this;
     }
 
-    public Comida build(){
+    public Comida build() {
         return this.comida;
     }
 }

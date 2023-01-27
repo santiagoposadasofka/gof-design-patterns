@@ -38,7 +38,7 @@ class ReproductorWav implements ReproductorDeAudio {
 }
 
 class AdaptadorDeAudio implements ReproductorDeAudio {
-    private ReproductorMp3 reproductorMp3 = new ReproductorMp3();
+    private final ReproductorMp3 reproductorMp3 = new ReproductorMp3();
 
     @Override
     public void reproducir(String archivo) {

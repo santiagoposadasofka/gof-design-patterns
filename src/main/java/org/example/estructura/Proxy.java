@@ -16,7 +16,7 @@ interface Imagen {
 }
 
 class ImagenReal implements Imagen {
-    private String rutaArchivo;
+    private final String rutaArchivo;
 
     public ImagenReal(String rutaArchivo) {
         this.rutaArchivo = rutaArchivo;
@@ -34,7 +34,7 @@ class ImagenReal implements Imagen {
 
 class ImagenProxy implements Imagen {
     private ImagenReal imagenReal;
-    private String rutaArchivo;
+    private final String rutaArchivo;
 
     public ImagenProxy(String rutaArchivo) {
         this.rutaArchivo = rutaArchivo;
