@@ -9,7 +9,11 @@ import java.util.List;
  * Permite notificar a todos los interesados sobre un cambio.
  * */
 interface Observer {
+
     void update(float temp, float humedad, float presion);
+
+
+
 }
 
 interface Subject {
@@ -94,4 +98,14 @@ class CondicionesActuales implements Observer, DisplayElement {
                 ", presion=" + presion +
                 '}';
     }
+
+    public void ejecutar () {
+        Clima clima = new Clima();
+        CondicionesActuales condicionesActuales = new CondicionesActuales(0, 0, 0);
+        clima.registerObserver(condicionesActuales);
+        clima.setMedidas(20, 30, 40);
+        System.out.println(condicionesActuales.toString());
+    }
 }
+
+

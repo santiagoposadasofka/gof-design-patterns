@@ -1,9 +1,23 @@
 package org.example.comprtamiento;
 
 import java.io.File;
+import java.util.Arrays;
 import java.util.List;
 
 public class Strategy {
+
+
+    public void ejecutar (){
+
+        List<File> files = Arrays.asList(new File("file1.txt"), new File("file2.txt"));
+        // Crea un contexto de compresión
+        CompressionContext context = new CompressionContext();
+        // Establece la estrategia de compresión ZIP
+        context.setCompressionStrategy(new ZipCompressionStrategy());
+        // Crea un archivo comprimido con los archivos de la lista
+        context.createArchive(files);
+
+    }
 
     /**
      * Permite definir un proposito pero dependiendo del contexto implementarlo.
@@ -38,3 +52,4 @@ class CompressionContext {
         strategy.compressFiles(files);
     }
 }
+
