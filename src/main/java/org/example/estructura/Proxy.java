@@ -7,6 +7,11 @@ public class Proxy {
      * para asi validar informacion, permisos o lo que sea de interes antes
      * de permitit el acceso a la información
      * */
+
+    public void ejecutarProxy(){
+        ImagenProxy imagenProxy= new ImagenProxy("C/Archivos de programas/windows");
+        imagenProxy.mostrar();
+    }
 }
 
 interface Imagen {

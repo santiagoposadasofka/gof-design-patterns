@@ -1,5 +1,7 @@
 package org.example.creacion;
 
+import java.awt.event.ItemEvent;
+
 public class Builder {
 
     /**
@@ -7,7 +9,16 @@ public class Builder {
      * o con diferente cantidad de atributos de forma facil y legible.
      * */
 
-
+    public void ejecutarBuilder(){
+        AccesoriosPc pcCompleto=new AccesoriosPcBuilder()
+                .control("Xbox")
+                .diadema("Gamer")
+                .mouse("Gamer")
+                .teclado("Logitech")
+                .pantalla("Asus")
+                .build();
+        System.out.println(pcCompleto.toString());
+    }
     Comida sanducheSencillo = new ComidaBuilder()
             .carne("jamon")
             .lechuga("crespa")
@@ -116,5 +127,92 @@ class ComidaBuilder {
 
     public Comida build(){
         return this.comida;
+    }
+}
+
+class AccesoriosPc{
+    private String teclado;
+    private String mouse;
+    private String pantalla;
+    private String mousepad;
+    private String diademas;
+    private String control;
+
+    public void setTeclado(String teclado) {
+        this.teclado = teclado;
+    }
+
+    public void setMouse(String mouse) {
+        this.mouse = mouse;
+    }
+
+    public void setPantalla(String pantalla) {
+        this.pantalla = pantalla;
+    }
+
+    public void setMousepad(String mousepad) {
+        this.mousepad = mousepad;
+    }
+
+    public void setDiademas(String diademas) {
+        this.diademas = diademas;
+    }
+
+    public void setControl(String control) {
+        this.control = control;
+    }
+
+    @Override
+    public String toString() {
+        return "AccesoriosPc{" +
+                "teclado='" + teclado + '\'' +
+                ", mouse='" + mouse + '\'' +
+                ", pantalla='" + pantalla + '\'' +
+                ", mousepad='" + mousepad + '\'' +
+                ", diademas='" + diademas + '\'' +
+                ", control='" + control + '\'' +
+                '}';
+    }
+}
+
+class AccesoriosPcBuilder{
+    private AccesoriosPc accesoriosPc;
+
+    public AccesoriosPcBuilder() {
+        accesoriosPc=new AccesoriosPc();
+    }
+
+    public AccesoriosPcBuilder mouse(String mouse) {
+        accesoriosPc.setTeclado(mouse);
+        return this;
+    }
+
+    public AccesoriosPcBuilder pantalla(String pantalla) {
+        accesoriosPc.setTeclado(pantalla);
+        return this;
+    }
+
+    public AccesoriosPcBuilder diadema(String diadema) {
+        accesoriosPc.setTeclado(diadema);
+        return this;
+    }
+
+    public AccesoriosPcBuilder mousepad(String mousepad) {
+        accesoriosPc.setTeclado(mousepad);
+        return this;
+    }
+
+    public AccesoriosPcBuilder control(String control) {
+        accesoriosPc.setTeclado(control);
+        return this;
+    }
+
+    public AccesoriosPcBuilder teclado(String teclado) {
+        accesoriosPc.setTeclado(teclado);
+        return this;
+    }
+
+    public AccesoriosPc build(){
+        return this.accesoriosPc;
     }
 }

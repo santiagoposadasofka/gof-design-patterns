@@ -1,6 +1,7 @@
 package org.example.comprtamiento;
 
 import java.io.File;
+import java.util.ArrayList;
 import java.util.List;
 
 public class Strategy {
@@ -8,6 +9,15 @@ public class Strategy {
     /**
      * Permite definir un proposito pero dependiendo del contexto implementarlo.
      * */
+
+    public void ejecuatrStrategy(){
+        List<File> filesList=new ArrayList<>();
+        CompressionStrategy zip=new ZipCompressionStrategy();
+        CompressionContext compressionContext=new CompressionContext();
+        compressionContext.createArchive(filesList);
+
+
+    }
 }
 
 
