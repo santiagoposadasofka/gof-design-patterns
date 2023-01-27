@@ -10,7 +10,10 @@ import java.util.List;
  * */
 interface Observer {
     void update(float temp, float humedad, float presion);
+
 }
+
+
 
 interface Subject {
     void registerObserver(Observer o);
@@ -94,4 +97,15 @@ class CondicionesActuales implements Observer, DisplayElement {
                 ", presion=" + presion +
                 '}';
     }
+
+    public void Ejecutar(){
+    Clima clima =new Clima();
+    CondicionesActuales condicionesActuales= new CondicionesActuales(5,10,123);
+    clima.registerObserver(condicionesActuales);//porque hiciste eso aca????
+    clima.setMedidas(10,20,256);
+    System.out.println(condicionesActuales.toString());//porque metimos condiciones actuales ahi entro ?? que se me guarda ahi pues?
+
+    }
 }
+
+
