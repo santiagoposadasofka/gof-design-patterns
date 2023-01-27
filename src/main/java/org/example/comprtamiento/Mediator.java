@@ -8,6 +8,9 @@ public class Mediator {
     /**
      * Permite interactuar con diferentes objetos por medio de un intermediario.
      * */
+    public class ejecutar{
+
+    }
 }
 
 

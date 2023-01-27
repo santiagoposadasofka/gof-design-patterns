@@ -8,10 +8,14 @@ public class Builder {
      * */
 
 
-    Comida sanducheSencillo = new ComidaBuilder()
-            .carne("jamon")
-            .lechuga("crespa")
-            .queso("Mozarella").build();
+        Comida sanducheSencillo = new ComidaBuilder()
+                .carne("jamon")
+                .lechuga("crespa")
+                .queso("Mozarella").build();
+
+
+
+
 
     Comida sanducheFull = new ComidaBuilder()
             .carne("Res")
