@@ -21,7 +21,6 @@ public class Factory {
     }
 }
 
-
 interface FiguraGeometrica {
     void dibujar();
 }

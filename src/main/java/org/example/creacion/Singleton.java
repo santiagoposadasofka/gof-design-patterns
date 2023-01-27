@@ -8,6 +8,11 @@ public class Singleton {
      * todos quien lo requieran tengan que tomar la informacion a partir de este,
      * evitando que hayan diferencias entre los interesados a la hora de tomar informacion
      * */
+    public void ejecutar(){
+
+
+
+    }
 }
 
 
@@ -18,6 +23,11 @@ class Configuracion {
 
     private Configuracion() {
     }
+
+    /**
+     * La clase Configuracion declara el método estático getInstancia que devuelve la misma instancia de su propia clase
+     *
+     */
 
     public static Configuracion getInstancia() {
         if (instancia == null) {
