@@ -8,15 +8,20 @@ public class Factory {
      */
     public void ejecutar() {
 
-        FiguraGeometrica figuraGeometrica1 = new FiguraGeometricaFactory().crearFiguraGeometrica("CUADRADO");
-        figuraGeometrica1.dibujar();
-        FiguraGeometrica figuraGeometrica2 = new FiguraGeometricaFactory().crearFiguraGeometrica("TRIANGULO");
-        figuraGeometrica2.dibujar();
-        FiguraGeometrica figuraGeometrica3 = new FiguraGeometricaFactory().crearFiguraGeometrica("nononon");
-        if(figuraGeometrica3 != null) { figuraGeometrica3.dibujar();
-        } else {
-         System.out.println("No se puede dibujar ");
-        }
+        System.out.println("___________________Factory Figuras Geometricas_________________");
+        FiguraGeometrica figuraGeometrica1 = new FiguraGeometricaFactory()
+                .crearFiguraGeometrica("CUADRADO");
+            figuraGeometrica1.dibujar();
+        FiguraGeometrica figuraGeometrica2 = new FiguraGeometricaFactory()
+                .crearFiguraGeometrica("TRIANGULO");
+            figuraGeometrica2.dibujar();
+        FiguraGeometrica figuraGeometrica3 = new FiguraGeometricaFactory()
+                .crearFiguraGeometrica("nononon");
+            System.out.println(figuraGeometrica3+" No se puede dibujar");
+        FiguraGeometrica figuraGeometrica4 = new FiguraGeometricaFactory()
+                .crearFiguraGeometrica("CIRCULO");
+            figuraGeometrica4.dibujar();
+        System.out.println("_______________________________________________________________");
     }
 
 
