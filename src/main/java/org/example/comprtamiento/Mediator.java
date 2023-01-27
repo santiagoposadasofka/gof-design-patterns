@@ -4,10 +4,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Mediator {
-
     /**
      * Permite interactuar con diferentes objetos por medio de un intermediario.
      * */
+    public static void ejecutar(){
+        UsuarioNormal usuarioNormal=new UsuarioNormal(new ChatRoom(),"Ivan");
+        usuarioNormal.enviarMensaje("No encuentro mi celular");
+    }
 }
 
 
