@@ -10,6 +10,7 @@ public class Strategy {
      * */
     public static void ejecutar(){
 
+    ZipCompressionStrategy compression = new ZipCompressionStrategy();
 
     }
 }
