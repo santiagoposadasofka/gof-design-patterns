@@ -8,6 +8,17 @@ public class Mediator {
     /**
      * Permite interactuar con diferentes objetos por medio de un intermediario.
      * */
+    public static void ejecutar(){
+        ChatRoom sala = new ChatRoom();
+        UsuarioNormal pedro = new UsuarioNormal(sala, "Pedro");
+        UsuarioNormal juan = new UsuarioNormal(sala, "Juan ");
+        UsuarioNormal luisa = new UsuarioNormal(sala, "Manuel ");
+        sala.agregarUsuario(pedro);
+        sala.agregarUsuario(juan);
+        sala.agregarUsuario(luisa);
+        pedro.enviarMensaje("Hola");
+
+    }
 }
 
 
@@ -65,6 +76,6 @@ class UsuarioNormal extends Usuario {
 
     @Override
     public void recibirMensaje(String mensaje){
-        System.out.println(mensaje);
+        System.out.println(nombre + "Esta recibiendo el mensaje: " + mensaje);
     }
 }

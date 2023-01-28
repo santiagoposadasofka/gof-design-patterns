@@ -1,12 +1,14 @@
 package org.example.creacion;
 
-public class Singleton {
+public class
+Singleton {
 
     /**
      * Nos permite asegurar que solo haya una instancia de un objeto esperado,
      * ya sea por que queremos que solo haya un objeto de este tipo y que a partir de el,
      * todos quien lo requieran tengan que tomar la informacion a partir de este,
      * evitando que hayan diferencias entre los interesados a la hora de tomar informacion
+     *
      * */
 }
 

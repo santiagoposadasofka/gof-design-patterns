@@ -8,6 +8,10 @@ public class Strategy {
     /**
      * Permite definir un proposito pero dependiendo del contexto implementarlo.
      * */
+    public static void ejecutar(){
+
+
+    }
 }
 
 
