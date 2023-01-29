@@ -1,12 +1,21 @@
 package org.example.estructura;
 
-public class Proxy {
+/*
+ * Es un intermediario que se pone al frente del recurso real para asi validar información, permisos o lo que sea de
+ * interés antes de permitir el acceso a la información.
+ */
 
-    /**
-     * Es un intermediario que se pone al frente del recurso real
-     * para asi validar informacion, permisos o lo que sea de interes antes
-     * de permitit el acceso a la información
-     * */
+public class Proxy {
+    public void ejecutar() {
+        // Se utilizan los elementos prediseñados para aplicar el patrón
+        Imagen imagenSinFiltro = new ImagenReal("Imagen sin filtro.png");  // Se crea una imagen sin filtro
+        imagenSinFiltro.mostrar();                                                   // Se muestra la imagen sin filtro
+        Imagen imagenConFiltro = new ImagenProxy("Imagen con filtro.png"); // Se crea una imagen con filtro
+        imagenConFiltro.mostrar();                                                   /* Se muestra la imagen con filtro
+                                                                                        (Al mostrar, se almacena una copia
+                                                                                        de la imagen sin filtro)
+                                                                                      */
+    }
 }
 
 interface Imagen {
@@ -14,7 +23,7 @@ interface Imagen {
 }
 
 class ImagenReal implements Imagen {
-    private String rutaArchivo;
+    private final String rutaArchivo;
 
     public ImagenReal(String rutaArchivo) {
         this.rutaArchivo = rutaArchivo;
@@ -32,7 +41,7 @@ class ImagenReal implements Imagen {
 
 class ImagenProxy implements Imagen {
     private ImagenReal imagenReal;
-    private String rutaArchivo;
+    private final String rutaArchivo;
 
     public ImagenProxy(String rutaArchivo) {
         this.rutaArchivo = rutaArchivo;
@@ -45,4 +54,3 @@ class ImagenProxy implements Imagen {
         imagenReal.mostrar();
     }
 }
-

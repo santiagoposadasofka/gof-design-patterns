@@ -1,28 +1,43 @@
 package org.example.creacion;
 
+/*
+ * Permite construir un objeto con diferentes niveles de especificidad, o con diferente cantidad de atributos de forma
+ * fácil y legible.
+ */
+
 public class Builder {
+    public void ejecutar() {
+        // Se utilizan los elementos prediseñados para aplicar el patrón
+        Comida sanducheSencillo = new ComidaBuilder()       // Se arma un sánduche con el constructor y varios ingredientes
+                .pan("Tajado")
+                .carne("jamon")
+                .lechuga("crespa")
+                .queso("Mozarella")
+                .build();
 
-    /**
-     * Nos permite construir un objeto con diferentes niveles de especificidad,
-     * o con diferente cantidad de atributos de forma facil y legible.
-     * */
+        Comida sanducheFull = new ComidaBuilder()           // Se arma un sánduche con el constructor y varios ingredientes
+                .pan("Tajado")
+                .carne("Res")
+                .tomate("en rodajas")
+                .lechuga("crespa")
+                .tomate("Mozarella")
+                .mostaza("Mucha")
+                .ketchup("poca")
+                .build();
 
-
-    Comida sanducheSencillo = new ComidaBuilder()
-            .carne("jamon")
-            .lechuga("crespa")
-            .queso("Mozarella").build();
-
-    Comida sanducheFull = new ComidaBuilder()
-            .carne("Res")
-            .tomate("en rodajas")
-            .lechuga("crespa")
-            .tomate("Mozarella")
-            .mostaza("Mucha")
-            .ketchup("poca")
-            .build();
+        Comida hamburguesaConMayonesa = new ComidaBuilder() // Se arma una hamburguesa con el constructor y varios ingredientes
+                .pan("Redondo")
+                .carne("Res")
+                .tomate("Rodajas")
+                .lechuga("Crespa")
+                .queso("Americano")
+                .mayonesa("Mucha")
+                .build();
+        sanducheSencillo.setMostaza("Poca");                // Se le agrega mostaza al primer sánduche
+        sanducheFull.setMayonesa("Normal");                 // Se le agrega mayonesa al segundo sánduche
+        hamburguesaConMayonesa.setCarne("Res y tocineta");  // Se le agrega tocineta a la hamburguesa
+    }
 }
-
 
 class Comida {
     private String pan;
@@ -68,7 +83,7 @@ class Comida {
 }
 
 class ComidaBuilder {
-    private Comida comida;
+    private final Comida comida;
 
     public ComidaBuilder() {
         comida = new Comida();
@@ -114,7 +129,7 @@ class ComidaBuilder {
         return this;
     }
 
-    public Comida build(){
+    public Comida build() {
         return this.comida;
     }
 }

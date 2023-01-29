@@ -1,14 +1,19 @@
 package org.example.creacion;
 
+/*
+ * Simplifica el proceso de construcción de objetos. En este caso por medio de un parámetro "tipo" se construye el
+ * objeto esperado.
+ */
+
 public class Factory {
-
-    /**
-     * Simplifica el proceso de construccion de objetos,
-     * en este caso por medio de un parametro "tipo" construimos el objeto esperado.
-     * */
+    public void ejecutar() {
+        // Se utilizan los elementos prediseñados para aplicar el patrón
+        FiguraGeometricaFactory fabrica = new FiguraGeometricaFactory(); // Se crea una nueva fábrica de figuras
+        fabrica.crearFiguraGeometrica("CUADRADO").dibujar();        // Se fabrica un cuadrado y se dibuja
+        fabrica.crearFiguraGeometrica("TRIANGULO").dibujar();       // Se fabrica un triángulo y se dibuja
+        fabrica.crearFiguraGeometrica("CIRCULO").dibujar();         // Se fabrica un círculo y se dibuja
+    }
 }
-
-
 
 interface FiguraGeometrica {
     void dibujar();
@@ -46,7 +51,7 @@ class FiguraGeometricaFactory {
             return new Triangulo();
         } else if (tipo.equalsIgnoreCase("CIRCULO")) {
             return new Circulo();
-        }else{
+        } else {
             return null;
         }
     }

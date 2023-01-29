@@ -3,21 +3,31 @@ package org.example.comprtamiento;
 import java.util.ArrayList;
 import java.util.List;
 
+// Permite interactuar con diferentes objetos por medio de un intermediario.
+
 public class Mediator {
-
-    /**
-     * Permite interactuar con diferentes objetos por medio de un intermediario.
-     * */
+    public void ejecutar() {
+        // Se utilizan los elementos prediseñados para aplicar el patrón
+        ChatMediator discord = new ChatRoom();                     // Se crea una sala de chat mediadora
+        Usuario u1 = new UsuarioNormal(discord, "Juan");    // Se crean 2 usuarios que estarán en la sala
+        Usuario u2 = new UsuarioNormal(discord, "Luis");
+        discord.agregarUsuario(u1);                                // Se agregan los usuarios a la sala de chat
+        discord.agregarUsuario(u2);
+        u1.enviarMensaje("Hola a todos!");                         /* El primer usuario envía un mensaje que se lee en
+                                                                      toda la sala de chat por cada miembro, en este
+                                                                      caso, solo el segundo usuario.
+                                                                    */
+    }
 }
-
 
 interface ChatMediator {
     void enviarMensaje(String mensaje, Usuario usuario);
+
     void agregarUsuario(Usuario usuario);
 }
 
 class ChatRoom implements ChatMediator {
-    private List<Usuario> usuarios;
+    private final List<Usuario> usuarios;
 
     public ChatRoom() {
         usuarios = new ArrayList<>();
@@ -64,7 +74,7 @@ class UsuarioNormal extends Usuario {
     }
 
     @Override
-    public void recibirMensaje(String mensaje){
+    public void recibirMensaje(String mensaje) {
         System.out.println(mensaje);
     }
 }
