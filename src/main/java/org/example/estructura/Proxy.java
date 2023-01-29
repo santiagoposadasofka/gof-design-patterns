@@ -7,6 +7,10 @@ public class Proxy {
      * para asi validar informacion, permisos o lo que sea de interes antes
      * de permitit el acceso a la información
      * */
+    public static void ejecuta(){
+        ImagenReal imagenReal = new ImagenReal("\"C:\\Users\\Yolima Alejandra\\Pictures\\Firma\\Foto.JPG\"");
+        imagenReal.mostrar();
+    }
 }
 
 interface Imagen {

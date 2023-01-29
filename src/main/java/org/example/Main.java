@@ -8,6 +8,7 @@ import org.example.creacion.Factory;
 import org.example.creacion.Singleton;
 import org.example.estructura.Adapter;
 import org.example.estructura.Decorator;
+import org.example.estructura.Proxy;
 
 public class Main {
     public static void main(String[] args) {
@@ -51,5 +52,9 @@ public class Main {
         System.out.println(" ");
         System.out.println("Decorator");
         Decorator.ejecutar();
+
+        System.out.println(" ");
+        System.out.println("Proxy");
+        Proxy.ejecuta();
     }
 }
