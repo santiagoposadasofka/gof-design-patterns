@@ -17,10 +17,13 @@ Singleton {
 
 
         Configuracion configuracion2 = Configuracion.getInstancia();
+        Configuracion configuracion3 = Configuracion.getInstancia();
         configuracion1.getValor1();
         configuracion2.getValor2();
+        configuracion3.getValor1();
         System.out.println(configuracion1.getValor1());
         System.out.println(configuracion1.getValor2());
+        System.out.println(configuracion3.getValor1());
     }
 
 }
