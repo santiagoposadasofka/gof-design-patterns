@@ -5,6 +5,7 @@ import org.example.comprtamiento.ObserverEjecutar;
 import org.example.comprtamiento.Strategy;
 import org.example.creacion.Builder;
 import org.example.creacion.Factory;
+import org.example.creacion.Singleton;
 
 public class Main {
     public static void main(String[] args) {
@@ -32,5 +33,10 @@ public class Main {
         System.out.println(" ");
         System.out.println("Factory");
         Factory.ejecutar();
+
+
+        System.out.println(" ");
+        System.out.println("Singleton");
+        Singleton.ejecutar();
     }
 }

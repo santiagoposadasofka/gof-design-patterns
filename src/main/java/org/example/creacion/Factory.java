@@ -24,8 +24,6 @@ public class Factory {
         circulo.dibujar();
 
 
-        FiguraGeometrica rectangulo = figuraGeometrica.crearFiguraGeometrica("RECTANGULO");
-        rectangulo.dibujar();
 
     }
 

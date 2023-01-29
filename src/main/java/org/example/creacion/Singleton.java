@@ -1,5 +1,7 @@
 package org.example.creacion;
 
+import java.lang.module.Configuration;
+
 public class
 Singleton {
 
@@ -10,6 +12,17 @@ Singleton {
      * evitando que hayan diferencias entre los interesados a la hora de tomar informacion
      *
      * */
+    public static void ejecutar(){
+        Configuracion configuracion1 = Configuracion.getInstancia();
+
+
+        Configuracion configuracion2 = Configuracion.getInstancia();
+        configuracion1.getValor1();
+        configuracion2.getValor2();
+        System.out.println(configuracion1.getValor1());
+        System.out.println(configuracion1.getValor2());
+    }
+
 }
 
 
@@ -29,18 +42,22 @@ class Configuracion {
     }
 
     public String getValor1() {
+
         return valor1;
     }
 
     public void setValor1(String valor1) {
+
         this.valor1 = valor1;
     }
 
     public String getValor2() {
+
         return valor2;
     }
 
     public void setValor2(String valor2) {
+
         this.valor2 = valor2;
     }
 }
