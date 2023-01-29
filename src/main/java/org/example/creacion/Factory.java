@@ -1,11 +1,32 @@
 package org.example.creacion;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Factory {
 
     /**
+     *
      * Simplifica el proceso de construccion de objetos,
      * en este caso por medio de un parametro "tipo" construimos el objeto esperado.
+     *
      * */
+    public static void ejecutar(){
+        FiguraGeometricaFactory figuraGeometrica =  new FiguraGeometricaFactory();
+        FiguraGeometrica cuadrado = figuraGeometrica.crearFiguraGeometrica("CUADRADO");
+        cuadrado.dibujar();
+
+        FiguraGeometrica triangulo = figuraGeometrica.crearFiguraGeometrica("TRIANGULO");
+        triangulo.dibujar();
+
+
+        FiguraGeometrica circulo = figuraGeometrica.crearFiguraGeometrica("CIRCULO");
+        circulo.dibujar();
+
+
+
+    }
+
 }
 
 

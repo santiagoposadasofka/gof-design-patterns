@@ -5,6 +5,14 @@ public class Decorator {
     /**
      * Permite a partir de una base añadir funciones o informacion adicional
      * */
+    public static void ejecutar(){
+        Cafe cafe = new Cafe();
+        Leche leche = new Leche(cafe);
+        System.out.println("Bebida: " + leche.getDescripcion());
+        System.out.println("Costo: " + leche.costo() + "$");
+
+
+    }
 }
 
 
