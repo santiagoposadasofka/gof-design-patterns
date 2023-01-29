@@ -55,6 +55,6 @@ public class Main {
 
         System.out.println(" ");
         System.out.println("Proxy");
-        Proxy.ejecuta();
+        Proxy.ejecutar();
     }
 }
