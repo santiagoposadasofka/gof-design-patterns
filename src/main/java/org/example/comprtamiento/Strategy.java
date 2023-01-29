@@ -11,6 +11,7 @@ public class Strategy {
      * */
     public static void ejecutar(){
 
+    System.out.println("compressing files with zip strategy\n");
     List<File> filesToCompress = new ArrayList<File>();
     filesToCompress.add(new File("archivo1.txt"));
     filesToCompress.add(new File("archivo2.txt"));
@@ -18,6 +19,15 @@ public class Strategy {
     CompressionContext context = new CompressionContext();
     context.setCompressionStrategy(new RarCompressionStrategy());
     context.createArchive(filesToCompress);
+
+    System.out.println("compressing files with RAR strategy\n");
+    filesToCompress.add(new File("archivo3.txt"));
+    filesToCompress.add(new File("archivo4.txt"));
+
+
+    context.setCompressionStrategy(new ZipCompressionStrategy());
+    context.createArchive(filesToCompress);
+
 
 
 
