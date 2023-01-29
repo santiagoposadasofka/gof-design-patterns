@@ -1,8 +1,7 @@
 package org.example.comprtamiento;
 
 import java.io.File;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class Strategy {
 
@@ -27,8 +26,6 @@ public class Strategy {
 
     context.setCompressionStrategy(new ZipCompressionStrategy());
     context.createArchive(filesToCompress);
-
-
 
 
 
