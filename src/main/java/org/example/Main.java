@@ -7,6 +7,7 @@ import org.example.creacion.Builder;
 import org.example.creacion.Factory;
 import org.example.creacion.Singleton;
 import org.example.estructura.Adapter;
+import org.example.estructura.Decorator;
 
 public class Main {
     public static void main(String[] args) {
@@ -46,5 +47,9 @@ public class Main {
         System.out.println("Adapter");
         Adapter.ejecutar();
 
+
+        System.out.println(" ");
+        System.out.println("Decorator");
+        Decorator.ejecutar();
     }
 }
