@@ -6,6 +6,7 @@ import org.example.comprtamiento.Strategy;
 import org.example.creacion.Builder;
 import org.example.creacion.Factory;
 import org.example.creacion.Singleton;
+import org.example.estructura.Adapter;
 
 public class Main {
     public static void main(String[] args) {
@@ -38,5 +39,12 @@ public class Main {
         System.out.println(" ");
         System.out.println("Singleton");
         Singleton.ejecutar();
+
+        System.out.println(" ");
+        System.out.println("===============Patrones de diseño de estructura===============");
+        System.out.println(" ");
+        System.out.println("Adapter");
+        Adapter.ejecutar();
+
     }
 }
