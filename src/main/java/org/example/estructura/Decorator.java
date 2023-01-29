@@ -1,49 +1,69 @@
 package org.example.estructura;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Decorator {
 
     /**
      * Permite a partir de una base añadir funciones o informacion adicional
-     * */
-}
+     */
 
 
-abstract class Bebida {
-    String descripcion = "Bebida desconocida";
+    public void ejecutar() {
 
-    public String getDescripcion() {
-        return descripcion;
+        /**
+         * Objeto creando un cafesito con leche
+         */
+        Bebida cafeLeche = new Leche(new Cafe());
+        System.out.println("la Bebida es" + " :" + cafeLeche.descripcion);
+        System.out.println("el costo es" + " :" + cafeLeche.costo());
+
+        Bebida Cafe = new Cafe();
+        System.out.println("la Bebida es" + " :" + Cafe.descripcion);
+        System.out.println("el costo es" + " :" + Cafe.costo());
+
+
     }
 
-    public abstract double costo();
-}
 
-class Cafe extends Bebida {
-    public Cafe() {
-        descripcion = "Café";
+    abstract class Bebida {
+        String descripcion = "Bebida desconocida";
+
+        public String getDescripcion() {
+            return descripcion;
+        }
+
+        public abstract double costo();
     }
 
-    public double costo() {
-        return 1.99;
-    }
-}
+    class Cafe extends Bebida {
+        public Cafe() {
+            descripcion = "Café";
+        }
 
-abstract class Adicional extends Bebida {
-    public abstract String getDescripcion();
-}
-
-class Leche extends Adicional {
-    Bebida bebida;
-
-    public Leche(Bebida bebida) {
-        this.bebida = bebida;
+        public double costo() {
+            return 1.99;
+        }
     }
 
-    public String getDescripcion() {
-        return bebida.getDescripcion() + ", Leche";
+    abstract class Adicional extends Bebida {
+        public abstract String getDescripcion();
     }
 
-    public double costo() {
-        return 0.10 + bebida.costo();
+    class Leche extends Adicional {
+        Bebida bebida;
+
+        public Leche(Bebida bebida) {
+            this.bebida = bebida;
+        }
+
+        public String getDescripcion() {
+            return bebida.getDescripcion() + ", Leche";
+        }
+
+        public double costo() {
+            return 0.10 + bebida.costo();
+        }
     }
 }

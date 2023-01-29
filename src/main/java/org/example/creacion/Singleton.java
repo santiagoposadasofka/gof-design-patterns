@@ -7,7 +7,20 @@ public class Singleton {
      * ya sea por que queremos que solo haya un objeto de este tipo y que a partir de el,
      * todos quien lo requieran tengan que tomar la informacion a partir de este,
      * evitando que hayan diferencias entre los interesados a la hora de tomar informacion
-     * */
+     */
+
+    public void ejecutar() {
+
+            Configuracion configuracion = new Configuracion();
+            configuracion.getValor1();
+            configuracion.getValor2();
+
+
+
+
+    }
+
+
 }
 
 
@@ -16,8 +29,9 @@ class Configuracion {
     private String valor1 = "default";
     private String valor2 = "default";
 
-    private Configuracion() {
+    Configuracion() {
     }
+
 
     public static Configuracion getInstancia() {
         if (instancia == null) {

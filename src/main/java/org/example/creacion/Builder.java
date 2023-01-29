@@ -5,22 +5,28 @@ public class Builder {
     /**
      * Nos permite construir un objeto con diferentes niveles de especificidad,
      * o con diferente cantidad de atributos de forma facil y legible.
-     * */
+     */
 
+    public void ejecutar() {
 
-    Comida sanducheSencillo = new ComidaBuilder()
-            .carne("jamon")
-            .lechuga("crespa")
-            .queso("Mozarella").build();
+        Comida sanducheSencillo = new ComidaBuilder()
+                .carne("jamon")
+                .lechuga("crespa")
+                .queso("Mozarella").build();
 
-    Comida sanducheFull = new ComidaBuilder()
-            .carne("Res")
-            .tomate("en rodajas")
-            .lechuga("crespa")
-            .tomate("Mozarella")
-            .mostaza("Mucha")
-            .ketchup("poca")
-            .build();
+        System.out.println("la comida es" + sanducheSencillo.toString());
+
+        Comida sanducheFull = new ComidaBuilder()
+                .carne("Res")
+                .tomate("en rodajas")
+                .lechuga("crespa")
+                .tomate("Mozarella")
+                .mostaza("Mucha")
+                .ketchup("poca")
+                .build();
+
+        System.out.println("la comida es " + sanducheFull.toString());
+    }
 }
 
 
@@ -64,6 +70,21 @@ class Comida {
 
     public void setKetchup(String ketchup) {
         this.ketchup = ketchup;
+    }
+
+
+    @Override
+    public String toString() {
+        return "Comida{" +
+                "pan='" + pan + '\'' +
+                ", carne='" + carne + '\'' +
+                ", lechuga='" + lechuga + '\'' +
+                ", tomate='" + tomate + '\'' +
+                ", queso='" + queso + '\'' +
+                ", mayonesa='" + mayonesa + '\'' +
+                ", mostaza='" + mostaza + '\'' +
+                ", ketchup='" + ketchup + '\'' +
+                '}';
     }
 }
 
@@ -114,7 +135,14 @@ class ComidaBuilder {
         return this;
     }
 
-    public Comida build(){
+    public Comida build() {
         return this.comida;
+    }
+
+    @Override
+    public String toString() {
+        return "ComidaBuilder{" +
+                "comida=" + comida +
+                '}';
     }
 }

@@ -7,12 +7,31 @@ public class Mediator {
 
     /**
      * Permite interactuar con diferentes objetos por medio de un intermediario.
-     * */
+     */
+
+
+    public void ejecutar() {
+        ChatRoom sala = new ChatRoom();
+
+        UsuarioNormal juan = new UsuarioNormal(sala, "juan");
+        UsuarioNormal yeison = new UsuarioNormal(sala, "yeison");
+        UsuarioNormal zulay = new UsuarioNormal(sala, "zulay");
+
+        sala.agregarUsuario(juan);
+        sala.agregarUsuario(yeison);
+        sala.agregarUsuario(zulay);
+
+        juan.enviarMensaje("hola soy pedro");
+        yeison.recibirMensaje("hola pedro soy yeison");
+
+
+    }
 }
 
 
 interface ChatMediator {
     void enviarMensaje(String mensaje, Usuario usuario);
+
     void agregarUsuario(Usuario usuario);
 }
 
@@ -50,6 +69,14 @@ abstract class Usuario {
     public abstract void enviarMensaje(String mensaje);
 
     public abstract void recibirMensaje(String mensaje);
+
+    @Override
+    public String toString() {
+        return "Usuario{" +
+                "mediator=" + mediator +
+                ", nombre='" + nombre + '\'' +
+                '}';
+    }
 }
 
 class UsuarioNormal extends Usuario {
@@ -64,7 +91,7 @@ class UsuarioNormal extends Usuario {
     }
 
     @Override
-    public void recibirMensaje(String mensaje){
+    public void recibirMensaje(String mensaje) {
         System.out.println(mensaje);
     }
 }
