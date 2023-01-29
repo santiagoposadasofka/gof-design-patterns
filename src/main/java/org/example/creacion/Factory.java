@@ -8,10 +8,10 @@ package org.example.creacion;
 public class Factory {
     public void ejecutar() {
         // Se utilizan los elementos prediseñados para aplicar el patrón
-        FiguraGeometricaFactory fabrica = new FiguraGeometricaFactory();
-        fabrica.crearFiguraGeometrica("CUADRADO").dibujar();
-        fabrica.crearFiguraGeometrica("TRIANGULO").dibujar();
-        fabrica.crearFiguraGeometrica("CIRCULO").dibujar();
+        FiguraGeometricaFactory fabrica = new FiguraGeometricaFactory(); // Se crea una nueva fábrica de figuras
+        fabrica.crearFiguraGeometrica("CUADRADO").dibujar();        // Se fabrica un cuadrado y se dibuja
+        fabrica.crearFiguraGeometrica("TRIANGULO").dibujar();       // Se fabrica un triángulo y se dibuja
+        fabrica.crearFiguraGeometrica("CIRCULO").dibujar();         // Se fabrica un círculo y se dibuja
     }
 }
 

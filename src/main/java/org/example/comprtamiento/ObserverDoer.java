@@ -5,19 +5,24 @@ import java.util.List;
 
 // Permite notificar a todos los interesados sobre un cambio.
 
+// Se modifica el nombre del archivo .java para que corresponda con el nombre de la nueva clase de ejecución
 public class ObserverDoer {
     public void ejecutar() {
         // Se utilizan los elementos prediseñados para aplicar el patrón
+
+        // Se crean 2 sensores con diferentes condiciones iniciales.
         CondicionesActuales sensor1 = new CondicionesActuales(20, 60, 1);
         CondicionesActuales sensor2 = new CondicionesActuales(18, 62, 0.98);
-        Clima clima = new Clima();
-        clima.registerObserver(sensor1);
+        Clima clima = new Clima();                              // Se crea un sujeto a observar, en este caso, el clima
+        clima.registerObserver(sensor1);                        // Se asignan los dos sensores para observar el clima
         clima.registerObserver(sensor2);
-        sensor1.display();
+        sensor1.display();                                      // Se muestra el estado actual de ambos sensores
         sensor2.display();
-        clima.setMedidas(21, 55, 0.95);
-        clima.removeObserver(sensor2);
-        sensor1.display();
+        clima.setMedidas(21, 55, 0.95);    // El clima cambia, por lo que se actualizan los sensores
+        clima.removeObserver(sensor2);                          // El segundo sensor deja de observar el clima
+        sensor1.display();                                      /* Se muestra el estado actual del primer sensor luego
+                                                                   del cambio en el clima.
+                                                                 */
     }
 }
 
@@ -97,7 +102,7 @@ class CondicionesActuales implements Observer, DisplayElement {
 
     @Override
     public void display() {
-        System.out.println(this.toString());
+        System.out.println(this.toString());    // Se modificó este método para que se pudiera utilizar en la ejecución
     }
 
     @Override
@@ -105,7 +110,7 @@ class CondicionesActuales implements Observer, DisplayElement {
         return "CondicionesActuales{" +
                 "temp=" + temp +
                 ", humedad=" + humedad +
-                ", presion=" + presion +
+                ", presión=" + presion +
                 '}';
     }
 }

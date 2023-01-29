@@ -8,12 +8,15 @@ import java.util.List;
 public class Mediator {
     public void ejecutar() {
         // Se utilizan los elementos prediseñados para aplicar el patrón
-        ChatMediator discord = new ChatRoom();
-        Usuario u1 = new UsuarioNormal(discord, "Juan");
+        ChatMediator discord = new ChatRoom();                     // Se crea una sala de chat mediadora
+        Usuario u1 = new UsuarioNormal(discord, "Juan");    // Se crean 2 usuarios que estarán en la sala
         Usuario u2 = new UsuarioNormal(discord, "Luis");
-        discord.agregarUsuario(u1);
+        discord.agregarUsuario(u1);                                // Se agregan los usuarios a la sala de chat
         discord.agregarUsuario(u2);
-        u1.enviarMensaje("Hola a todos!");
+        u1.enviarMensaje("Hola a todos!");                         /* El primer usuario envía un mensaje que se lee en
+                                                                      toda la sala de chat por cada miembro, en este
+                                                                      caso, solo el segundo usuario.
+                                                                    */
     }
 }
 

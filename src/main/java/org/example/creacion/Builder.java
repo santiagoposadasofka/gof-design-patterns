@@ -8,14 +8,15 @@ package org.example.creacion;
 public class Builder {
     public void ejecutar() {
         // Se utilizan los elementos prediseñados para aplicar el patrón
-        Comida sanducheSencillo = new ComidaBuilder()
+        Comida sanducheSencillo = new ComidaBuilder()       // Se arma un sánduche con el constructor y varios ingredientes
                 .pan("Tajado")
                 .carne("jamon")
                 .lechuga("crespa")
                 .queso("Mozarella")
                 .build();
 
-        Comida sanducheFull = new ComidaBuilder().pan("Tajado")
+        Comida sanducheFull = new ComidaBuilder()           // Se arma un sánduche con el constructor y varios ingredientes
+                .pan("Tajado")
                 .carne("Res")
                 .tomate("en rodajas")
                 .lechuga("crespa")
@@ -24,7 +25,7 @@ public class Builder {
                 .ketchup("poca")
                 .build();
 
-        Comida hamburguesaConMayonesa = new ComidaBuilder()
+        Comida hamburguesaConMayonesa = new ComidaBuilder() // Se arma una hamburguesa con el constructor y varios ingredientes
                 .pan("Redondo")
                 .carne("Res")
                 .tomate("Rodajas")
@@ -32,9 +33,9 @@ public class Builder {
                 .queso("Americano")
                 .mayonesa("Mucha")
                 .build();
-        sanducheSencillo.setMostaza("Poca");
-        sanducheFull.setMayonesa("Normal");
-        hamburguesaConMayonesa.setCarne("Res y tocineta");
+        sanducheSencillo.setMostaza("Poca");                // Se le agrega mostaza al primer sánduche
+        sanducheFull.setMayonesa("Normal");                 // Se le agrega mayonesa al segundo sánduche
+        hamburguesaConMayonesa.setCarne("Res y tocineta");  // Se le agrega tocineta a la hamburguesa
     }
 }
 

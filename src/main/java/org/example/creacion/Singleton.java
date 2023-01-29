@@ -9,14 +9,14 @@ package org.example.creacion;
 public class Singleton {
     public void ejecutar() {
         // Se utilizan los elementos prediseñados para aplicar el patrón
-        Configuracion config1 = Configuracion.getInstancia();
-        System.out.println(config1.getValor1());
+        Configuracion config1 = Configuracion.getInstancia(); // Instancia de una configuración desde su método para instanciar
+        System.out.println(config1.getValor1());              // Se muestran los valores de configuración
         System.out.println(config1.getValor2());
-        config1.setValor1("Nuevo desde config 1");
+        config1.setValor1("Nuevo desde config 1");            // Se modifican los valores de configuración desde la configuración 1
         config1.setValor2("Nuevo desde config 1");
-        Configuracion config2 = Configuracion.getInstancia();
-        System.out.println(config2.getValor1());
-        System.out.println(config2.getValor2());
+        Configuracion config2 = Configuracion.getInstancia(); // Instancia de otra configuración desde su método para instanciar
+        System.out.println(config2.getValor1());              // Se muestran los valores de configuración (siguen siendo los modificados
+        System.out.println(config2.getValor2());              // desde la configuración 1
     }
 }
 
