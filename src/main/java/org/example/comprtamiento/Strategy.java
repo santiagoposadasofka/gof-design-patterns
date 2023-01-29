@@ -1,6 +1,7 @@
 package org.example.comprtamiento;
 
 import java.io.File;
+import java.util.ArrayList;
 import java.util.List;
 
 public class Strategy {
@@ -10,7 +11,16 @@ public class Strategy {
      * */
     public static void ejecutar(){
 
-    ZipCompressionStrategy compression = new ZipCompressionStrategy();
+    List<File> filesToCompress = new ArrayList<File>();
+    filesToCompress.add(new File("archivo1.txt"));
+    filesToCompress.add(new File("archivo2.txt"));
+
+    CompressionContext context = new CompressionContext();
+    context.setCompressionStrategy(new RarCompressionStrategy());
+    context.createArchive(filesToCompress);
+
+
+
 
     }
 }
@@ -21,14 +31,24 @@ interface CompressionStrategy {
 }
 
 class ZipCompressionStrategy implements CompressionStrategy {
+
     public void compressFiles(List<File> files) {
         // implementación del algoritmo de compresión ZIP
+        System.out.println(files + " Archivo(s) comprimido en formato ZIP");
+
+
+
+
     }
 }
 
 class RarCompressionStrategy implements CompressionStrategy {
+    public RarCompressionStrategy() {
+    }
+
     public void compressFiles(List<File> files) {
         // implementación del algoritmo de compresión RAR
+        System.out.println(files + " Archivo(s) comprimido en formato RAR");
     }
 }
 
@@ -40,6 +60,7 @@ class CompressionContext {
     }
 
     public void createArchive(List<File> files) {
+
         strategy.compressFiles(files);
     }
 }

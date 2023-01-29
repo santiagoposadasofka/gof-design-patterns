@@ -10,7 +10,8 @@ public class Mediator {
      * */
     public static void ejecutar(){
         ChatRoom sala = new ChatRoom();
-        UsuarioNormal pedro = new UsuarioNormal(sala, "Pedro");
+        UsuarioNormal pedro = new UsuarioNormal(sala, "Pedro" +
+                "");
         UsuarioNormal juan = new UsuarioNormal(sala, "Juan ");
         UsuarioNormal luisa = new UsuarioNormal(sala, "Manuel ");
         sala.agregarUsuario(pedro);

@@ -2,6 +2,7 @@ package org.example;
 
 import org.example.comprtamiento.Mediator;
 import org.example.comprtamiento.ObserverEjecutar;
+import org.example.comprtamiento.Strategy;
 
 public class Main {
     public static void main(String[] args) {
@@ -13,5 +14,10 @@ public class Main {
         System.out.println(" ");
         System.out.println("Mediator");
         Mediator.ejecutar();
+
+
+        System.out.println(" ");
+        System.out.println("Strategy");
+        Strategy.ejecutar();
     }
 }
