@@ -7,6 +7,16 @@ public class Builder {
      * o con diferente cantidad de atributos de forma facil y legible.
      * */
 
+    public void ejecutar (){
+        Comida sanduchitoPersonal = new ComidaBuilder()
+                .carne("Res")
+                .pan("Blanco")
+                .ketchup("mucha")
+                .mayonesa("poca")
+                .build();
+        System.out.println(sanduchitoPersonal.toString());
+    }
+
 
     Comida sanducheSencillo = new ComidaBuilder()
             .carne("jamon")
