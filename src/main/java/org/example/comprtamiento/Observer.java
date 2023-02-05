@@ -4,6 +4,7 @@ package org.example.comprtamiento;
 import java.util.ArrayList;
 import java.util.List;
 
+
 interface Observer {
     void update(float temp, float humedad, float presion);
 }
